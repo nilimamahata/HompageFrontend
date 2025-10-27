@@ -23,21 +23,31 @@ const LoginPage = () => {
     let password = e.target.password.value;
 
     if (email.length > 0 && password.length > 0) {
-      const formData = {
-        email,
-        password,
-      };
-      try {
-        const response = await axios.post(
-          "http://localhost:3000/api/v1/login",
-          formData
-        );
-        localStorage.setItem('auth', JSON.stringify(response.data.token));
-        toast.success("Login successfull");
-        navigate("/dashboard");
-      } catch (err) {
-        console.log(err);
-        toast.error(err.message);
+      if (userType === 'student') {
+        // Bypass API for students, directly navigate
+        localStorage.setItem('auth', JSON.stringify('dummy-token'));
+        localStorage.setItem('userType', userType);
+        toast.success("Login successful");
+        navigate("/student-dashboard");
+      } else {
+        // For other user types, keep the API call (assuming backend is available)
+        const formData = {
+          email,
+          password,
+        };
+        try {
+          const response = await axios.post(
+            "http://localhost:3000/api/v1/login",
+            formData
+          );
+          localStorage.setItem('auth', JSON.stringify(response.data.token));
+          localStorage.setItem('userType', userType);
+          toast.success("Login successful");
+          navigate("/dashboard");
+        } catch (err) {
+          console.log(err);
+          toast.error(err.message);
+        }
       }
     } else {
       toast.error("Please fill all inputs");
@@ -60,8 +70,13 @@ const LoginPage = () => {
 
   useEffect(() => {
     if(token !== ""){
+      const storedUserType = localStorage.getItem('userType');
       toast.success("You already logged in");
-      navigate("/dashboard");
+      if (storedUserType === 'student') {
+        navigate("/student-dashboard");
+      } else {
+        navigate("/dashboard");
+      }
     }
   }, []);
 
@@ -72,6 +87,8 @@ const LoginPage = () => {
       </div>
       <div className="login-right">
         <div className="login-right-container">
+          <img src="/cat.png" alt="Cat" className="cat-image" />
+          <button className="back-button" onClick={() => navigate('/')}>Back</button>
           <div className="login-logo">
             <img src={Logo} alt="" />
           </div>

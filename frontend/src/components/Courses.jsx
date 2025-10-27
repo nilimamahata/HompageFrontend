@@ -126,7 +126,7 @@ const Courses = () => {
                     Enroll
                   </button>
                   <button
-                    onClick={() => navigate(`/class/${course.id + 7}`)}
+                    onClick={() => navigate(`/class/${course.id}`)}
                     className="details-btn"
                   >
                     Details

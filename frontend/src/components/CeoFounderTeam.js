@@ -4,7 +4,7 @@ import "./Contact2.css";
 const CeoFounderTeam = () => {
   const teamMembers = [
     {
-      name: "Dhanandjay  Kumar",
+      name: "Dhananjay  Kumar",
       role: "CEO & Founder",
       bio: "he is the visionary behind Shiksha, with over 20 years of experience in education technology. He founded the company to revolutionize online learning.",
       email: "info@shikshacom.com",

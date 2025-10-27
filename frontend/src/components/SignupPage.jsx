@@ -78,11 +78,13 @@ const SignupPage = () => {
       {/* RIGHT SIDE - SIGNUP FORM */}
       <div className="register-right">
         <div className="register-right-container">
+          <img src="/cat.png" alt="Cat" className="cat-image" />
+          <button className="back-button" onClick={() => navigate('/')}>Back</button>
           <div className="register-logo">
             <img src={Logo} alt="Logo" />
           </div>
           <div className="register-center">
-            <h2>Welcome to our website!</h2>
+            <h2>Welcome to SHIKSHA!</h2>
             <p>Please enter your details</p>
             <form onSubmit={handleRegisterSubmit}>
               <input type="text" placeholder="Name" name="name" required />
@@ -142,7 +144,7 @@ const SignupPage = () => {
               </div>
               <div className="register-center-buttons">
                 <button type="submit">Sign Up</button>
-                <button type="button">
+                <button type="submit">
                   <img src={GoogleSvg} alt="Google" />
                   Sign Up with Google
                 </button>

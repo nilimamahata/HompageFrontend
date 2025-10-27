@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route, useNavigate } from 'react-router-dom';
+import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Service from './components/Service';
@@ -21,6 +21,7 @@ import ValuesPage from './components/ValuesPage';
 import WhyChooseShikshaPage from './components/WhyChooseShikshaPage';
 import LoginPage from './components/LoginPage';
 import SignupPage from './components/SignupPage';
+import StudentDashboard from './components/StudentDashboard';
 import './index.css';
 import './App.css';
 
@@ -28,6 +29,7 @@ import StudentCourses from './components/StudentCourses';
 
 function App() {
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleLoginClick = () => {
     navigate('/login');
@@ -39,7 +41,7 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar onLoginClick={handleLoginClick} onSignupClick={handleSignupClick} />
+      {location.pathname !== '/login' && location.pathname !== '/signup' && location.pathname !== '/student-dashboard' && <Navbar onLoginClick={handleLoginClick} onSignupClick={handleSignupClick} />}
       <Routes>
         {/* Scrollable landing page */}
         <Route
@@ -88,6 +90,9 @@ function App() {
         {/* Auth pages */}
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
+
+        {/* Student Dashboard */}
+        <Route path="/student-dashboard" element={<StudentDashboard />} />
       </Routes>
     </div>
   );
