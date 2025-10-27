@@ -29,7 +29,7 @@ const LoginForm = () => {
       const loginData = {
         email: role === 'student' ? email : '',
         password,
-        uniqueId: role === 'teacher' ? uniqueId : '',
+        uniqueId: role === 'teacher' || role === 'admin' ? uniqueId : '',
         role
       };
 
@@ -91,13 +91,13 @@ const LoginForm = () => {
   };
 
   return (
-    <div className="bg-white p-8 rounded-2xl shadow-2xl w-full max-w-md">
+    <div className="login-form-card">
       <div className="flex justify-center mb-6">
         <img src="/shikhsa_logo.png" alt="Shiksha Institute Logo" className="rounded-full shadow-lg" />
       </div>
-      <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">Login</h2>
+      <h2 className="login-form-title">Login</h2>
 
-      {/* Role Selection */}
+        {/* Role Selection */}
       <div className="mb-6">
         <div className="flex bg-gray-100 rounded-lg p-1 mb-4">
           <button
@@ -128,11 +128,25 @@ const LoginForm = () => {
           >
             Teacher Login
           </button>
+          <button
+            type="button"
+            onClick={() => {
+              setRole('admin');
+              console.log('🔄 Role changed to: admin');
+            }}
+            className={`flex-1 py-2 px-4 rounded-md font-medium transition-colors ${
+              role === 'admin'
+                ? 'bg-blue-600 text-white'
+                : 'text-gray-600 hover:text-gray-800'
+            }`}
+          >
+            Admin Login
+          </button>
         </div>
 
         {/* ROLE INDICATOR */}
         <div style={{
-          background: role === 'teacher' ? 'linear-gradient(45deg, #2196F3 0%, #1976D2 100%)' : 'linear-gradient(45deg, #4CAF50 0%, #45a049 100%)',
+          background: role === 'teacher' ? 'linear-gradient(45deg, #2196F3 0%, #1976D2 100%)' : role === 'admin' ? 'linear-gradient(45deg, #FF5722 0%, #D84315 100%)' : 'linear-gradient(45deg, #4CAF50 0%, #45a049 100%)',
           color: 'white',
           padding: '10px',
           borderRadius: '8px',
@@ -141,9 +155,9 @@ const LoginForm = () => {
           fontWeight: 'bold',
           marginBottom: '10px'
         }}>
-          {role === 'teacher' ? '👨‍🏫 TEACHER LOGIN SELECTED' : '🎓 STUDENT LOGIN SELECTED'}
+          {role === 'teacher' ? '👨‍🏫 TEACHER LOGIN SELECTED' : role === 'admin' ? '👑 ADMIN LOGIN SELECTED' : '🎓 STUDENT LOGIN SELECTED'}
           <br />
-          <small>Make sure to select "Teacher Login" for teacher access!</small>
+          <small>{role === 'teacher' ? 'Make sure to select "Teacher Login" for teacher access!' : role === 'admin' ? 'Admin access required!' : 'Student login for enrolled students!'}</small>
         </div>
       </div>
 
@@ -157,12 +171,21 @@ const LoginForm = () => {
             className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
           />
-        ) : (
+        ) : role === 'teacher' ? (
           <input
             type="text"
             value={uniqueId}
             onChange={(e) => setUniqueId(e.target.value)}
             placeholder="Teacher ID (e.g., TEACH001)"
+            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            required
+          />
+        ) : (
+          <input
+            type="text"
+            value={uniqueId}
+            onChange={(e) => setUniqueId(e.target.value)}
+            placeholder="Admin ID"
             className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
           />
@@ -192,7 +215,7 @@ const LoginForm = () => {
         </button>
       </form>
       <p className="mt-6 text-center text-gray-600">
-        Don't have an account? <span className="text-blue-600 cursor-pointer font-semibold hover:underline">Sign Up</span>
+        Don't have an account? <span className="text-blue-600 cursor-pointer font-semibold hover:underline" onClick={() => navigate('/signup')}>Sign Up</span>
       </p>
     </div>
   );

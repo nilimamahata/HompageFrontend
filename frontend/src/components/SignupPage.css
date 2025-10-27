@@ -1,0 +1,163 @@
+.register-main {
+  display: flex;
+}
+
+.register-left {
+  flex-grow: 1;
+  height: 100vh;
+  background-color: #e9e9e9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.register-right {
+  height: 100vh;
+  flex-grow: 1;
+  background-color: #B5C99A;
+}
+
+.register-right-container {
+  height: 100%;
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.register-right form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-logo {
+  align-self: center;
+  padding-top: 20px;
+}
+
+.register-center {
+  margin: auto 0;
+  text-align: center;
+}
+
+.register-logo img {
+  width: 40px;
+}
+
+.register-center h2 {
+  font-size: 24px;
+}
+
+.register-center p {
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+form input[type="email"],
+form input[type="password"],
+form input[type="text"],
+form input[type="tel"],
+form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 0px;
+  border-bottom: 1px solid black;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.pass-input-div {
+  position: relative;
+}
+
+.pass-input-div svg {
+  font-size: 20px;
+  position: absolute;
+  right: 10px;
+  bottom: 20px;
+  cursor: pointer;
+  outline: none;
+}
+
+form button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+.register-center-buttons {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.register-center-buttons button:nth-child(1) {
+  background-color: black;
+  color: white;
+  border: 3px solid black;
+  transition: background 1s linear, color 500ms linear;
+}
+
+.register-center-buttons button:nth-child(1):hover {
+  color: #333;
+  background-color: white;
+}
+
+.register-center-buttons button:nth-child(2) {
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+  transition: background 500ms linear;
+}
+
+.register-center-buttons button:nth-child(2) img {
+  width: 30px;
+}
+
+.register-center-buttons button:nth-child(2):hover {
+  background: #c4c4c4c2;
+}
+
+.register-bottom-p {
+  text-align: center;
+  font-size: 14px;
+  padding-bottom: 20px;
+}
+
+.register-bottom-p a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register-bottom-p a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .register-left {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .register-center h2 {
+    font-size: 30px;
+  }
+
+  .register-center p {
+    font-size: 15px;
+  }
+}

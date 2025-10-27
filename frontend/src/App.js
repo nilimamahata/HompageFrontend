@@ -19,6 +19,8 @@ import VisionPage from './components/VisionPage';
 import MissionPage from './components/MissionPage';
 import ValuesPage from './components/ValuesPage';
 import WhyChooseShikshaPage from './components/WhyChooseShikshaPage';
+import LoginPage from './components/LoginPage';
+import SignupPage from './components/SignupPage';
 import './index.css';
 import './App.css';
 
@@ -27,9 +29,17 @@ import StudentCourses from './components/StudentCourses';
 function App() {
   const navigate = useNavigate();
 
+  const handleLoginClick = () => {
+    navigate('/login');
+  };
+
+  const handleSignupClick = () => {
+    navigate('/signup');
+  };
+
   return (
     <div className="App">
-      <Navbar />
+      <Navbar onLoginClick={handleLoginClick} onSignupClick={handleSignupClick} />
       <Routes>
         {/* Scrollable landing page */}
         <Route
@@ -74,6 +84,10 @@ function App() {
 
         {/* Why Choose Shiksha page */}
         <Route path="/why-choose-shiksha" element={<WhyChooseShikshaPage />} />
+
+        {/* Auth pages */}
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignupPage />} />
       </Routes>
     </div>
   );

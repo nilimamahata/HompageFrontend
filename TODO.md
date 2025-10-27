@@ -1,0 +1,2 @@
+- [x] Update LoginPage.js to conditionally apply CSS class to the image based on showPassword state
+- [x] Update LoginPage.css to add smooth transition and rotation animation for the image when password is shown
