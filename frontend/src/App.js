@@ -26,6 +26,10 @@ import './index.css';
 import './App.css';
 
 import StudentCourses from './components/StudentCourses';
+import LiveRecordedClasses from './components/LiveRecordedClasses';
+import Assignments from './components/Assignments';
+import Schedule from './components/Schedule';
+import Calendar from './components/Calendar';
 
 function App() {
   const navigate = useNavigate();
@@ -41,7 +45,7 @@ function App() {
 
   return (
     <div className="App">
-      {location.pathname !== '/login' && location.pathname !== '/signup' && location.pathname !== '/student-dashboard' && <Navbar onLoginClick={handleLoginClick} onSignupClick={handleSignupClick} />}
+      {location.pathname !== '/login' && location.pathname !== '/signup' && location.pathname !== '/student-dashboard' && location.pathname !== '/student-courses' && location.pathname !== '/live-recorded' && location.pathname !== '/assignments' && location.pathname !== '/schedule' && <Navbar onLoginClick={handleLoginClick} onSignupClick={handleSignupClick} />}
       <Routes>
         {/* Scrollable landing page */}
         <Route
@@ -93,6 +97,18 @@ function App() {
 
         {/* Student Dashboard */}
         <Route path="/student-dashboard" element={<StudentDashboard />} />
+
+        {/* Live & Recorded Classes */}
+        <Route path="/live-recorded" element={<LiveRecordedClasses />} />
+
+        {/* Assignments */}
+        <Route path="/assignments" element={<Assignments />} />
+
+        {/* Schedule */}
+        <Route path="/schedule" element={<Schedule />} />
+
+        {/* Calendar */}
+        <Route path="/calendar" element={<Calendar />} />
       </Routes>
     </div>
   );

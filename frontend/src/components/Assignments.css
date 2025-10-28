@@ -1,0 +1,228 @@
+.assignments-page {
+  padding: 20px;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+.assignments-page-header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: linear-gradient(135deg, #B5C99A 0%, #d5e4c5 100%);
+  color: rgb(50, 67, 41);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.assignments-page-header h1 {
+  margin: 0 0 10px 0;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.assignments-page-header p {
+  margin: 0;
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.assignments-content {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.assignments-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.assignments-table th,
+.assignments-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.assignments-table th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+  color: #2e3525;
+}
+
+.assignments-table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.status-badge {
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: #333;
+}
+
+.submit-btn, .view-btn {
+  background-color: #B5C99A;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover, .view-btn:hover {
+  background-color: #a6bd89;
+}
+
+.assignment-details-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  border-radius: 8px;
+  padding: 30px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  color: #2e3525;
+  border-bottom: 2px solid #B5C99A;
+  padding-bottom: 10px;
+}
+
+.modal-content p {
+  margin: 10px 0;
+  color: #666;
+}
+
+.feedback-section {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 6px;
+  margin: 20px 0;
+  border-left: 4px solid #B5C99A;
+}
+
+.feedback-section h3 {
+  margin-top: 0;
+  color: #2e3525;
+}
+
+.upload-section {
+  margin: 20px 0;
+}
+
+.upload-section h3 {
+  color: #2e3525;
+  margin-bottom: 15px;
+}
+
+.file-input {
+  display: block;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.file-preview {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  border-left: 4px solid #B5C99A;
+}
+
+.submitted-file {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 6px;
+  margin: 20px 0;
+  border-left: 4px solid #B5C99A;
+}
+
+.submit-assignment-btn {
+  background-color: #4d4e34;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  margin-right: 10px;
+}
+
+.submit-assignment-btn:hover {
+  background-color: #767854;
+}
+
+.close-modal-btn {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.close-modal-btn:hover {
+  background-color: #5a6268;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .assignments-page {
+    padding: 10px;
+  }
+
+  .assignments-page-header h1 {
+    font-size: 2rem;
+  }
+
+  .assignments-table {
+    font-size: 0.9rem;
+  }
+
+  .assignments-table th,
+  .assignments-table td {
+    padding: 10px;
+  }
+
+  .modal-content {
+    padding: 20px;
+    width: 95%;
+  }
+
+  .submit-btn, .view-btn {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+}
