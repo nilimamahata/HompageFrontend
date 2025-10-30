@@ -6,9 +6,9 @@
   flex-direction: column;
 }
 
-.teacher-top-navbar {
+.td-teacher-top-navbar {
   background-color: #baa429;
-  color: #fffdfd;
+  color: #161515;
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;

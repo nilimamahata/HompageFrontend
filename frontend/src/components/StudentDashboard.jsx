@@ -148,6 +148,7 @@ const StudentDashboard = () => {
           <ul className="sidebar-nav">
             <li><a href="#dashboard"><span className="sidebar-icon">🏠</span> Dashboard</a></li>
             <li><a href="/student-courses"><span className="sidebar-icon">📚</span> My Classes</a></li>
+            <li><a href="/student-test"><span className="sidebar-icon">📚</span> Tests</a></li>
             <li><a href='/live-recorded'><span className="sidebar-icon">📹</span> Live & Recorded</a></li>
             <li><a href='/assignments'><span className="sidebar-icon">📝</span> Assignments</a></li>
             <li><a href='/schedule'><span className="sidebar-icon">📅</span> Schedule</a></li>

@@ -1,0 +1,359 @@
+.class-test {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7fa;
+  min-height: 100vh;
+}
+
+.C-T-teacher-top-navbar {
+  background-color: #ffffff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.C-T-teacher-top-navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.C-T-teacher-profile-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.C-T-teacher-profile-avatar {
+  width: 40px;
+  height: 40px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.C-T-teacher-top-navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.C-T-teacher-nav-icon {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.C-T-teacher-logout-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.C-T-teacher-logout-btn:hover {
+  background-color: #c82333;
+}
+
+.C-T-class-test-body {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.C-T-class-test-body h1 {
+  color: #333;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.C-T-classes-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+.C-T-class-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.C-T-class-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.C-T-class-card h3 {
+  color: #007bff;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 0.5rem;
+}
+
+.C-T-tests-list {
+  margin-bottom: 1rem;
+}
+
+.C-T-tests-list h4 {
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.C-T-test-item {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.C-T-test-item span {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.C-T-test-controls {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.C-T-test-controls button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: background-color 0.3s;
+}
+
+.C-T-test-controls button:hover {
+  background-color: #218838;
+}
+
+.C-T-answers-preview {
+  background-color: #e9ecef;
+  padding: 0.5rem;
+  border-radius: 4px;
+  margin-top: 0.5rem;
+}
+
+.C-T-answer-item {
+  margin-bottom: 0.5rem;
+}
+
+.C-T-answer-item p {
+  margin: 0.2rem 0;
+}
+
+.C-T-test-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.C-T-test-actions button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.C-T-test-actions button:hover {
+  background-color: #0056b3;
+}
+
+.C-T-class-card button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 0.5rem;
+}
+
+.C-T-class-card button:hover {
+  background-color: #0056b3;
+}
+
+.C-T-test-section {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.C-T-test-section input[type="text"] {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.C-T-questions-builder {
+  margin-bottom: 1rem;
+}
+
+.C-T-question-builder {
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.C-T-question-builder input[type="text"] {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.C-T-question-builder select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.C-T-options-builder {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.C-T-edit-section {
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  padding: 1rem;
+}
+
+.C-T-edit-section input[type="text"] {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.C-T-questions-editor {
+  margin-bottom: 1rem;
+}
+
+.C-T-question-editor {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.C-T-question-editor input[type="text"] {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.C-T-question-editor select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.C-T-options-editor {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.C-T-edit-section button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: background-color 0.3s;
+}
+
+.C-T-edit-section button:hover {
+  background-color: #218838;
+}
+
+@media (max-width: 768px) {
+  .C-T-classes-list {
+    grid-template-columns: 1fr;
+  }
+
+  .C-T-teacher-top-navbar {
+    padding: 1rem;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .C-T-teacher-top-navbar-left {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .C-T-teacher-top-navbar-right {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .C-T-class-test-body {
+    padding: 1rem;
+  }
+
+  .C-T-test-controls {
+    flex-direction: column;
+  }
+
+  .C-T-test-actions {
+    flex-direction: column;
+  }
+
+  .C-T-options-builder,
+  .C-T-options-editor {
+    grid-template-columns: 1fr;
+  }
+}

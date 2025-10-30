@@ -1,0 +1,332 @@
+.teacher-courses {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  min-height: 100vh;
+}
+
+.T-C-teacher-top-navbar {
+  background-color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.T-C-teacher-top-navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.T-C-teacher-profile-info {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.T-C-teacher-profile-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #007bff;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.T-C-teacher-top-navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.T-C-teacher-nav-icon {
+  font-size: 20px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.T-C-teacher-logout-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.T-C-teacher-logout-btn:hover {
+  background-color: #c82333;
+}
+
+.T-C-teacher-courses-body {
+  padding: 20px;
+}
+
+.T-C-teacher-courses-body h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.T-C-classes-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 20px;
+}
+
+.T-C-class-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.T-C-class-card h3 {
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.T-C-materials-list {
+  margin-bottom: 15px;
+}
+
+.T-C-material-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+}
+
+.T-C-material-item span {
+  flex-grow: 1;
+}
+
+.T-C-material-item input {
+  flex-grow: 1;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.T-C-edit-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.T-C-edit-section input[type="text"] {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.T-C-edit-section input[type="file"] {
+  padding: 5px;
+}
+
+.T-C-edit-section button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.T-C-edit-section button:hover {
+  background-color: #218838;
+}
+
+.T-C-edit-section button:last-child {
+  background-color: #6c757d;
+}
+
+.T-C-edit-section button:last-child:hover {
+  background-color: #545b62;
+}
+
+.T-C-material-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.T-C-material-actions button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.T-C-material-actions button:hover {
+  background-color: #0056b3;
+}
+
+.T-C-material-actions button:nth-child(2) {
+  background-color: #dc3545;
+}
+
+.T-C-material-actions button:nth-child(2):hover {
+  background-color: #c82333;
+}
+
+.T-C-upload-section {
+  margin-top: 15px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
+.T-C-upload-section input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.T-C-upload-section input[type="file"] {
+  margin-bottom: 10px;
+}
+
+.T-C-upload-section button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.T-C-upload-section button:hover {
+  background-color: #218838;
+}
+
+.T-C-upload-section button:last-child {
+  background-color: #6c757d;
+}
+
+.T-C-upload-section button:last-child:hover {
+  background-color: #545b62;
+}
+
+.T-C-class-card button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.T-C-class-card button:hover {
+  background-color: #218838;
+}
+
+.T-C-tests-list {
+  margin-top: 15px;
+}
+
+.T-C-tests-list h4 {
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.T-C-test-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+}
+
+.T-C-test-item span {
+  flex-grow: 1;
+}
+
+.T-C-test-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.T-C-test-actions button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.T-C-test-actions button:hover {
+  background-color: #0056b3;
+}
+
+.T-C-test-actions button:nth-child(2) {
+  background-color: #dc3545;
+}
+
+.T-C-test-actions button:nth-child(2):hover {
+  background-color: #c82333;
+}
+
+.T-C-test-section {
+  margin-top: 15px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
+.T-C-test-section input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.T-C-test-section textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  min-height: 100px;
+}
+
+.T-C-test-section button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.T-C-test-section button:hover {
+  background-color: #218838;
+}
+
+.T-C-test-section button:last-child {
+  background-color: #6c757d;
+}
+
+.T-C-test-section button:last-child:hover {
+  background-color: #545b62;
+}

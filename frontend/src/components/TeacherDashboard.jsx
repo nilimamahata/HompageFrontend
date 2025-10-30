@@ -91,7 +91,7 @@ const TeacherDashboard = () => {
   return (
     <div className="teacher-dashboard">
       {/* Top Navbar */}
-      <nav className="teacher-top-navbar">
+      <nav className="td-teacher-top-navbar">
         <div className="teacher-top-navbar-left">
           <div className="teacher-profile-info">
             <div className="teacher-profile-avatar">T</div>
@@ -121,10 +121,10 @@ const TeacherDashboard = () => {
         <aside className="teacher-left-sidebar">
           <ul className="teacher-sidebar-nav">
             <li><a href="#dashboard"><span className="teacher-sidebar-icon">🏠</span> Dashboard</a></li>
-            <li><a href="/study-materials"><span className="teacher-sidebar-icon">📚</span> Study Materials</a></li>
+            <li><a href="/teacher-courses"><span className="teacher-sidebar-icon">📚</span> Study Materials</a></li>
             <li><a href='/teacher-live-recorded'><span className="teacher-sidebar-icon">📹</span> Live & Recorded</a></li>
-            <li><a href='/assignments'><span className="teacher-sidebar-icon">📝</span> Assignments</a></li>
-            <li><a href="#test"><span className="teacher-sidebar-icon">✏️</span> Test</a></li>
+            <li><a href='/teacher-assignments'><span className="teacher-sidebar-icon">📝</span> Assignments</a></li>
+            <li><a href="/class-test"><span className="teacher-sidebar-icon">✏️</span> Class-Test</a></li>
             <li><a href='/schedule'><span className="teacher-sidebar-icon">📅</span> Schedule</a></li>
             <li><a href="#students"><span className="teacher-sidebar-icon">👥</span> My Students</a></li>
             <li><a href="#messages"><span className="teacher-sidebar-icon">💬</span> Messages</a></li>

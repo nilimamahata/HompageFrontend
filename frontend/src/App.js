@@ -32,6 +32,10 @@ import TeacherLiveRecordedClasses from './components/TeacherLiveRecordedClasses'
 import Assignments from './components/Assignments';
 import Schedule from './components/Schedule';
 import Calendar from './components/Calendar';
+import TeacherCourses from './components/TeacherCourses';
+import ClassTest from './components/ClassTest';
+import StudentTest from './components/StudentTest';
+import TeacherAssignments from './components/TeacherAssignments';
 
 function App() {
   const navigate = useNavigate();
@@ -47,7 +51,7 @@ function App() {
 
   return (
     <div className="App">
-      {location.pathname !== '/login' && location.pathname !== '/signup' && location.pathname !== '/student-dashboard' && location.pathname !== '/teacher-dashboard' && location.pathname !== '/student-courses' && location.pathname !== '/live-recorded' && location.pathname !== '/teacher-live-recorded' && location.pathname !== '/assignments' && location.pathname !== '/schedule' && <Navbar onLoginClick={handleLoginClick} onSignupClick={handleSignupClick} />}
+      {location.pathname !== '/login' && location.pathname !== '/signup' && location.pathname !== '/student-dashboard' && location.pathname !== '/teacher-dashboard' && location.pathname !== '/student-courses' && location.pathname !== '/live-recorded' && location.pathname !== '/teacher-live-recorded' && location.pathname !== '/student-test' && location.pathname !== '/schedule' &&  location.pathname !== '/teacher-courses' && location.pathname !== '/class-test' && location.pathname !== '/teacher-assignments' && <Navbar onLoginClick={handleLoginClick} onSignupClick={handleSignupClick} />}
       <Routes>
         {/* Scrollable landing page */}
         <Route
@@ -108,6 +112,18 @@ function App() {
 
         {/* Teacher Live & Recorded Classes */}
         <Route path="/teacher-live-recorded" element={<TeacherLiveRecordedClasses />} />
+
+        {/* Teacher Assignments page */}
+        <Route path="/teacher-assignments" element={<TeacherAssignments />} />
+        
+        {/* Student Test page */}
+        <Route path="/student-test" element={<StudentTest />} />
+
+        {/* Teacher Courses page */}
+        <Route path="/teacher-courses" element={<TeacherCourses />} />
+
+        {/* Class Test page */}
+        <Route path="/class-test" element={<ClassTest />} />
 
         {/* Assignments */}
         <Route path="/assignments" element={<Assignments />} />
