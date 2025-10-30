@@ -28,6 +28,7 @@ import './App.css';
 
 import StudentCourses from './components/StudentCourses';
 import LiveRecordedClasses from './components/LiveRecordedClasses';
+import TeacherLiveRecordedClasses from './components/TeacherLiveRecordedClasses';
 import Assignments from './components/Assignments';
 import Schedule from './components/Schedule';
 import Calendar from './components/Calendar';
@@ -46,7 +47,7 @@ function App() {
 
   return (
     <div className="App">
-      {location.pathname !== '/login' && location.pathname !== '/signup' && location.pathname !== '/student-dashboard' && location.pathname !== '/teacher-dashboard' && location.pathname !== '/student-courses' && location.pathname !== '/live-recorded' && location.pathname !== '/assignments' && location.pathname !== '/schedule' && <Navbar onLoginClick={handleLoginClick} onSignupClick={handleSignupClick} />}
+      {location.pathname !== '/login' && location.pathname !== '/signup' && location.pathname !== '/student-dashboard' && location.pathname !== '/teacher-dashboard' && location.pathname !== '/student-courses' && location.pathname !== '/live-recorded' && location.pathname !== '/teacher-live-recorded' && location.pathname !== '/assignments' && location.pathname !== '/schedule' && <Navbar onLoginClick={handleLoginClick} onSignupClick={handleSignupClick} />}
       <Routes>
         {/* Scrollable landing page */}
         <Route
@@ -104,6 +105,9 @@ function App() {
 
         {/* Live & Recorded Classes */}
         <Route path="/live-recorded" element={<LiveRecordedClasses />} />
+
+        {/* Teacher Live & Recorded Classes */}
+        <Route path="/teacher-live-recorded" element={<TeacherLiveRecordedClasses />} />
 
         {/* Assignments */}
         <Route path="/assignments" element={<Assignments />} />

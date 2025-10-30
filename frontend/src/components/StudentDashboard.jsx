@@ -152,7 +152,7 @@ const StudentDashboard = () => {
             <li><a href='/assignments'><span className="sidebar-icon">📝</span> Assignments</a></li>
             <li><a href='/schedule'><span className="sidebar-icon">📅</span> Schedule</a></li>
             <li><a href="#grades"><span className="sidebar-icon">📊</span> Grades</a></li>
-            <li><a href="#resources"><span className="sidebar-icon">📁</span> Resources</a></li>
+            <li><a href="#study-materials"><span className="sidebar-icon">📁</span> Study Materials</a></li>
             <li><a href="#messages"><span className="sidebar-icon">💬</span> Messages</a></li>
           </ul>
         </aside>
@@ -255,7 +255,6 @@ const StudentDashboard = () => {
               <ul>
                 <li><a href="#" onClick={(e) => { e.preventDefault(); setShowCalendar(true); }}><span className="quick-icon">📅</span> Calendar</a></li>
                 <li><a href="#timetable"><span className="quick-icon">⏰</span> Timetable</a></li>
-                <li><a href="#library"><span className="quick-icon">📖</span> Library</a></li>
                 <li><a href="#support"><span className="quick-icon">🆘</span> Support</a></li>
                 <li><a href="#feedback"><span className="quick-icon">💬</span> Feedback</a></li>
               </ul>

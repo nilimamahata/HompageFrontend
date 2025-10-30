@@ -121,11 +121,12 @@ const TeacherDashboard = () => {
         <aside className="teacher-left-sidebar">
           <ul className="teacher-sidebar-nav">
             <li><a href="#dashboard"><span className="teacher-sidebar-icon">🏠</span> Dashboard</a></li>
-            <li><a href="/teacher-courses"><span className="teacher-sidebar-icon">📚</span> My Classes</a></li>
-            <li><a href='/live-recorded'><span className="teacher-sidebar-icon">📹</span> Live & Recorded</a></li>
+            <li><a href="/study-materials"><span className="teacher-sidebar-icon">📚</span> Study Materials</a></li>
+            <li><a href='/teacher-live-recorded'><span className="teacher-sidebar-icon">📹</span> Live & Recorded</a></li>
             <li><a href='/assignments'><span className="teacher-sidebar-icon">📝</span> Assignments</a></li>
+            <li><a href="#test"><span className="teacher-sidebar-icon">✏️</span> Test</a></li>
             <li><a href='/schedule'><span className="teacher-sidebar-icon">📅</span> Schedule</a></li>
-            <li><a href="#students"><span className="teacher-sidebar-icon">👥</span> Students</a></li>
+            <li><a href="#students"><span className="teacher-sidebar-icon">👥</span> My Students</a></li>
             <li><a href="#messages"><span className="teacher-sidebar-icon">💬</span> Messages</a></li>
           </ul>
         </aside>
@@ -247,9 +248,6 @@ const TeacherDashboard = () => {
               <ul>
                 <li><a href="#" onClick={(e) => { e.preventDefault(); setShowCalendar(true); }}><span className="teacher-quick-icon">📅</span> Calendar</a></li>
                 <li><a href="#timetable"><span className="teacher-quick-icon">⏰</span> Timetable</a></li>
-                <li><a href="#library"><span className="teacher-quick-icon">📖</span> Library</a></li>
-                <li><a href="#support"><span className="teacher-quick-icon">🆘</span> Support</a></li>
-                <li><a href="#feedback"><span className="teacher-quick-icon">💬</span> Feedback</a></li>
               </ul>
             </div>
           </aside>
