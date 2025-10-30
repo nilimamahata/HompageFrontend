@@ -29,6 +29,12 @@ const LoginPage = () => {
         localStorage.setItem('userType', userType);
         toast.success("Login successful");
         navigate("/student-dashboard");
+      } else if (userType === 'teacher') {
+        // Bypass API for teachers, directly navigate
+        localStorage.setItem('auth', JSON.stringify('dummy-teacher-token'));
+        localStorage.setItem('userType', userType);
+        toast.success("Login successful");
+        navigate("/teacher-dashboard");
       } else {
         // For other user types, keep the API call (assuming backend is available)
         const formData = {
@@ -74,6 +80,8 @@ const LoginPage = () => {
       toast.success("You already logged in");
       if (storedUserType === 'student') {
         navigate("/student-dashboard");
+      } else if (storedUserType === 'teacher') {
+        navigate("/teacher-dashboard");
       } else {
         navigate("/dashboard");
       }
