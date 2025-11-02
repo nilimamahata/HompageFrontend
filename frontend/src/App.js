@@ -51,7 +51,7 @@ function App() {
 
   return (
     <div className="App">
-      {location.pathname !== '/login' && location.pathname !== '/signup' && location.pathname !== '/student-dashboard' && location.pathname !== '/teacher-dashboard' && location.pathname !== '/student-courses' && location.pathname !== '/live-recorded' && location.pathname !== '/teacher-live-recorded' && location.pathname !== '/student-test' && location.pathname !== '/schedule' &&  location.pathname !== '/teacher-courses' && location.pathname !== '/class-test' && location.pathname !== '/teacher-assignments' && <Navbar onLoginClick={handleLoginClick} onSignupClick={handleSignupClick} />}
+      {location.pathname !== '/login' && location.pathname !== '/signup' && location.pathname !== '/student-dashboard' && location.pathname !== '/teacher-dashboard' && location.pathname !== '/student-courses' && location.pathname !== '/live-recorded' && location.pathname !== '/teacher-live-recorded' && location.pathname !== '/student-test' && location.pathname !== '/schedule' &&  location.pathname !== '/teacher-courses' && location.pathname !== '/class-test' && location.pathname !== '/teacher-assignments' && location.pathname !== '/assignments' && <Navbar onLoginClick={handleLoginClick} onSignupClick={handleSignupClick} />}
       <Routes>
         {/* Scrollable landing page */}
         <Route

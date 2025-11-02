@@ -10,7 +10,7 @@
   text-align: center;
   margin-bottom: 30px;
   padding: 20px;
-  background: linear-gradient(135deg, #B5C99A 0%, #d5e4c5 100%);
+  background: linear-gradient(135deg, #8ea6c1 0%, #b7c9d8 100%);
   color: rgb(50, 67, 41);
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -19,12 +19,14 @@
 .schedule-header h1 {
   margin: 0 0 10px 0;
   font-size: 2.5rem;
+  color: black;
   font-weight: bold;
 }
 
 .schedule-header p {
   margin: 0 0 20px 0;
   font-size: 1.2rem;
+  color: black;
   opacity: 0.9;
 }
 
@@ -106,7 +108,7 @@
   text-align: center;
   margin-bottom: 15px;
   padding-bottom: 10px;
-  border-bottom: 2px solid #B5C99A;
+  border-bottom: 2px solid #748cab;
 }
 
 .day-header h3 {
@@ -125,7 +127,7 @@
   background-color: #f8f9fa;
   border-radius: 6px;
   padding: 10px;
-  border-left: 4px solid #B5C99A;
+  border-left: 4px solid #335685ff;
   transition: transform 0.2s;
 }
 
@@ -160,7 +162,7 @@
 
 .join-link {
   display: inline-block;
-  background-color: #B5C99A;
+  background-color: #6583abff;
   color: white;
   text-decoration: none;
   padding: 5px 10px;
@@ -171,7 +173,7 @@
 }
 
 .join-link:hover {
-  background-color: #a6bd89;
+  background-color: #748cab;
 }
 
 .legend {
@@ -185,7 +187,7 @@
 .legend h3 {
   margin-top: 0;
   color: #2e3525;
-  border-bottom: 2px solid #B5C99A;
+  border-bottom: 2px solid #748cab;
   padding-bottom: 10px;
 }
 

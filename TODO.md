@@ -1,29 +1,22 @@
-# TODO: Implement Teacher Live & Recorded Classes Page
+# Task: Update Student Test Page Theme to Match Assignment Page
 
-## Completed Tasks
-- [x] Create TeacherLiveRecordedClasses.jsx component with page title, action buttons, upcoming live classes section, and recorded classes management.
-- [x] Create TeacherLiveRecordedClasses.css for styling the new component.
-- [x] Add import for TeacherLiveRecordedClasses in App.js.
-- [x] Add new route '/teacher-live-recorded' in App.js.
-- [x] Update navbar condition in App.js to exclude the new route.
-- [x] Update sidebar link in TeacherDashboard.jsx to point to '/teacher-live-recorded'.
-- [x] Add recorded classes section with tabbed/filterable layout (All Recorded, Class 8-12).
-- [x] Implement recorded class cards with thumbnail, title, subject, uploaded on, views, comments, class, and actions (Edit, Delete, View Analytics, Copy Link).
-- [x] Add video preview modal with video player, description, download notes, engagement analytics, and comment section.
-- [x] Implement analytics snapshot section with total live sessions, recordings uploaded, average views, and average rating.
-- [x] Create detailed modals for scheduling live class and uploading recorded class with all required fields.
-- [x] Add responsive design for mobile/tablet with collapsible panels and FAB button.
-- [x] Apply clean, modern UI with soft shadows, rounded corners, and smooth animations.
+## Information Gathered
+- **Assignment Page (Assignments.jsx & Assignments.css)**: Features a soft blue-gray gradient theme with colors like #8ea6c1, #b7c9d8, #748cab, #f8fafc, #e9eef5. Includes gradients for header and page background, rounded corners, shadows, and a clean, professional look.
+- **Student Test Page (StudentTest.jsx & StudentTest.css)**: Currently uses a lighter background (#f4f7fa), white navbar, and different color schemes (e.g., #007bff for buttons, #28a745 for submit). Needs to be updated to match the assignment page's theme.
+- **Dependencies**: No other files need changes; focus is on StudentTest.css to align styling.
 
-## Pending Tasks
-- [ ] Test the new page by running the application and navigating to it from the teacher dashboard.
-- [ ] Implement actual functionality for scheduling live classes (modal with form).
-- [ ] Implement actual functionality for uploading recorded classes (modal with form).
-- [ ] Integrate with backend for live class scheduling, uploading, and management.
-- [ ] Add real-time features for going live (e.g., integration with Jitsi, Google Meet).
-- [ ] Implement engagement tracking (views, likes, comments) for recorded classes.
-- [ ] Add rescheduling and deletion functionality for classes.
-- [ ] Ensure responsive design for mobile devices.
-- [ ] Add loading states and error handling.
-- [ ] Implement search and filter functionality for recorded classes.
-- [ ] Add optional enhancements like integrated calendar view, AI summary generator, batch tagging system.
+## Plan
+- Update StudentTest.css to adopt the assignment page's theme:
+  - Change overall background to linear-gradient(to bottom right, #f8fafc, #e9eef5).
+  - Update navbar to use gradient background similar to assignment header (linear-gradient(135deg, #8ea6c1 0%, #b7c9d8 100%)).
+  - Adjust button colors to #748cab and similar shades.
+  - Update card and section backgrounds to white with shadows, matching assignment page.
+  - Ensure responsive design remains intact.
+- No changes needed to StudentTest.jsx as styling is handled via CSS.
+
+## Dependent Files to Edit
+- frontend/src/components/StudentTest.css
+
+## Followup Steps
+- Test the updated styling in the browser to ensure it matches the assignment page.
+- Verify responsiveness on different screen sizes.

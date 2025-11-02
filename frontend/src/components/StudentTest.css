@@ -1,82 +1,59 @@
+/* ===== General Page Styling ===== */
 .student-test {
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f7fa;
+  padding: 30px 50px;
+  font-family: "Inter", "Poppins", sans-serif;
+  background: linear-gradient(to bottom right, #f8fafc, #e9eef5);
+  color: #222;
   min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.st-student-top-navbar {
-  background-color: #fff;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 100;
+/* ===== Page Header ===== */
+.st-test-page-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 35px;;
+  background: linear-gradient(135deg, #8ea6c1 0%, #b7c9d8 100%);
+  color: #1f2937;
+  border-radius: 14px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
 }
 
-.st-student-top-navbar-left {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+.st-test-page-header h1 {
+  margin: 0 0 15px 0;
+  font-size: 2.3rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
 }
 
-.st-student-profile-info {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+.st-test-page-header p {
+  margin: 0;
+  font-size: 1.05rem;
+  opacity: 0.85;
 }
 
-.st-student-profile-avatar {
-  width: 40px;
-  height: 40px;
-  background-color: #28a745;
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-}
-
-.st-student-top-navbar-right {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.st-student-nav-icon {
-  font-size: 1.2rem;
-  cursor: pointer;
-}
-
-.st-student-logout-btn {
-  background-color: #dc3545;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.st-student-logout-btn:hover {
-  background-color: #c82333;
-}
-
+/* ===== Main Content ===== */
 .st-student-test-body {
-  padding: 2rem;
-  max-width: 800px;
-  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 25px 30px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  overflow-x: auto;
+  max-width: none;
+  margin: 0;
 }
 
 .st-student-test-body h1 {
-  color: #333;
+  color: #1f2937;
   margin-bottom: 2rem;
   text-align: center;
+  font-size: 2.3rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
 }
 
+/* ===== Tests List ===== */
 .st-tests-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -84,59 +61,69 @@
 }
 
 .st-test-card {
-  background-color: #fff;
-  border-radius: 8px;
+  background-color: #ffffff;
+  border-radius: 12px;
   padding: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .st-test-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
 .st-test-card h3 {
-  color: #007bff;
+  color: #748cab;
   margin-bottom: 0.5rem;
+  font-weight: 600;
 }
 
 .st-test-card p {
   margin: 0.3rem 0;
   color: #555;
+  font-size: 0.97rem;
 }
 
 .st-test-card button {
-  background-color: #007bff;
+  background-color: #748cab;
   color: white;
   border: none;
-  padding: 0.6rem 1.2rem;
-  border-radius: 4px;
+  padding: 8px 16px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background-color 0.25s ease, transform 0.15s ease;
   margin-top: 1rem;
   width: 100%;
 }
 
 .st-test-card button:hover {
-  background-color: #0056b3;
+  background-color: #5e7595;
+  transform: translateY(-2px);
 }
 
+/* ===== Test Taking ===== */
 .st-test-taking {
-  background-color: #fff;
-  border-radius: 8px;
-  padding: 2rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 25px 30px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
 }
 
 .st-test-taking h2 {
-  color: #333;
+  color: #1e293b;
   margin-bottom: 0.5rem;
+  font-size: 1.6rem;
+  border-bottom: 2px solid #748cab;
+  padding-bottom: 10px;
 }
 
 .st-test-taking p {
-  color: #666;
+  color: #555;
   margin-bottom: 2rem;
+  line-height: 1.5;
 }
 
 .st-questions-section {
@@ -146,12 +133,13 @@
 .st-question-item {
   margin-bottom: 2rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #ececec;
 }
 
 .st-question-item h4 {
-  color: #333;
+  color: #1f2937;
   margin-bottom: 1rem;
+  font-size: 1.1rem;
 }
 
 .st-options-section {
@@ -165,14 +153,14 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.2s ease;
 }
 
 .st-option-label:hover {
-  background-color: #f8f9fa;
+  background-color: #f9fafc;
 }
 
 .st-option-label input[type="radio"] {
@@ -181,61 +169,73 @@
 
 .st-short-answer-section input {
   width: 100%;
-  padding: 0.5rem;
-  border: 1px solid #ced4da;
-  border-radius: 4px;
-  font-size: 1rem;
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+}
+
+.st-short-answer-section input:hover {
+  border-color: #748cab;
 }
 
 .st-submit-btn {
-  background-color: #28a745;
+  background-color: #748cab;
   color: white;
   border: none;
-  padding: 0.8rem 2rem;
-  border-radius: 4px;
+  padding: 10px 20px;
+  border-radius: 8px;
   cursor: pointer;
+  font-weight: 600;
   font-size: 1rem;
   margin-right: 1rem;
-  transition: background-color 0.3s;
+  transition: background-color 0.25s ease, transform 0.15s ease;
 }
 
 .st-submit-btn:hover {
-  background-color: #218838;
+  background-color: #5e7595;
+  transform: translateY(-2px);
 }
 
 .st-back-btn {
-  background-color: #6c757d;
+  background-color: #9ca3af;
   color: white;
   border: none;
-  padding: 0.8rem 2rem;
-  border-radius: 4px;
+  padding: 10px 20px;
+  border-radius: 8px;
   cursor: pointer;
+  font-weight: 600;
   font-size: 1rem;
-  transition: background-color 0.3s;
+  transition: background-color 0.25s ease, transform 0.15s ease;
 }
 
 .st-back-btn:hover {
-  background-color: #545b62;
+  background-color: #6b7280;
+  transform: translateY(-2px);
 }
 
+/* ===== Test Results ===== */
 .st-test-results {
-  background-color: #fff;
-  border-radius: 8px;
-  padding: 2rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 25px 30px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
   text-align: center;
 }
 
 .st-score-display {
   margin-bottom: 2rem;
   padding: 1rem;
-  border-radius: 8px;
-  background-color: #f8f9fa;
+  border-radius: 10px;
+  background-color: #f8fafc;
+  border-left: 4px solid #748cab;
 }
 
 .st-score-display h3 {
   font-size: 2rem;
   margin-bottom: 0.5rem;
+  color: #1f2937;
 }
 
 .st-answers-review {
@@ -244,32 +244,37 @@
 }
 
 .st-answers-review h3 {
-  color: #333;
+  color: #1f2937;
   margin-bottom: 1rem;
+  font-size: 1.1rem;
 }
 
 .st-answer-review-item {
   margin-bottom: 1.5rem;
-  padding: 1rem;
-  border: 1px solid #dee2e6;
-  border-radius: 4px;
-  background-color: #f8f9fa;
+  padding: 15px 18px;
+  border: 1px solid #ececec;
+  border-radius: 10px;
+  background-color: #f8fafc;
+  border-left: 4px solid #748cab;
 }
 
 .st-answer-review-item h4 {
-  color: #007bff;
+  color: #748cab;
   margin-bottom: 0.5rem;
 }
 
 .st-answer-review-item p {
   margin: 0.3rem 0;
+  line-height: 1.5;
 }
 
 .st-result-indicator {
   display: inline-block;
-  padding: 0.3rem 0.6rem;
-  border-radius: 4px;
-  font-weight: bold;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
   margin-top: 0.5rem;
 }
 
@@ -283,9 +288,18 @@
   color: #721c24;
 }
 
+/* ===== Responsive Design ===== */
 @media (max-width: 768px) {
+  .student-test {
+    padding: 15px;
+  }
+
   .st-student-test-body {
-    padding: 1rem;
+    padding: 15px;
+  }
+
+  .st-student-test-body h1 {
+    font-size: 2rem;
   }
 
   .st-tests-list {
@@ -293,11 +307,11 @@
   }
 
   .st-test-taking {
-    padding: 1rem;
+    padding: 15px;
   }
 
   .st-test-results {
-    padding: 1rem;
+    padding: 15px;
   }
 
   .st-submit-btn,

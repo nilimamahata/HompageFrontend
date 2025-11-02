@@ -104,14 +104,14 @@ const Assignments = () => {
   };
 
   return (
-    <div className="assignments-page">
-      <div className="assignments-page-header">
+    <div className="a-assignments-page">
+      <div className="a-assignments-page-header">
         <h1>Assignments</h1>
         <p>Submit your work and review teacher feedback</p>
       </div>
 
-      <div className="assignments-content">
-        <table className="assignments-table">
+      <div className="a-assignments-content">
+        <table className="a-assignments-table">
           <thead>
             <tr>
               <th>Assignment Name</th>
@@ -129,7 +129,7 @@ const Assignments = () => {
                 <td>{assignment.dueDate}</td>
                 <td>
                   <span
-                    className="status-badge"
+                    className="a-status-badge"
                     style={{ backgroundColor: getStatusColor(assignment.status) }}
                   >
                     {assignment.status}
@@ -138,14 +138,14 @@ const Assignments = () => {
                 <td>
                   {!assignment.submitted ? (
                     <button
-                      className="submit-btn"
+                      className="a-submit-btn"
                       onClick={() => setSelectedAssignment(assignment)}
                     >
                       Submit
                     </button>
                   ) : (
                     <button
-                      className="view-btn"
+                      className="a-view-btn"
                       onClick={() => setSelectedAssignment(assignment)}
                     >
                       View Details
@@ -158,37 +158,37 @@ const Assignments = () => {
         </table>
 
         {selectedAssignment && (
-          <div className="assignment-details-modal">
-            <div className="modal-content">
+          <div className="a-assignment-details-modal">
+            <div className="a-modal-content">
               <h2>{selectedAssignment.name}</h2>
               <p><strong>Subject:</strong> {selectedAssignment.subject}</p>
               <p><strong>Due Date:</strong> {selectedAssignment.dueDate}</p>
               <p><strong>Status:</strong> {selectedAssignment.status}</p>
 
               {selectedAssignment.feedback && (
-                <div className="feedback-section">
+                <div className="a-feedback-section">
                   <h3>Teacher Feedback</h3>
                   <p>{selectedAssignment.feedback}</p>
                 </div>
               )}
 
               {!selectedAssignment.submitted ? (
-                <div className="upload-section">
+                <div className="a-upload-section">
                   <h3>Submit Assignment</h3>
                   <input
                     type="file"
                     accept=".pdf,.doc,.docx,.txt"
                     onChange={handleFileUpload}
-                    className="file-input"
+                    className="a-file-input"
                   />
                   {uploadedFile && (
-                    <div className="file-preview">
+                    <div className="a-file-preview">
                       <p><strong>Selected File:</strong> {uploadedFile.name}</p>
                       <p><strong>Size:</strong> {(uploadedFile.size / 1024 / 1024).toFixed(2)} MB</p>
                     </div>
                   )}
                   <button
-                    className="submit-assignment-btn"
+                    className="a-submit-assignment-btn"
                     onClick={() => handleSubmit(selectedAssignment.id)}
                   >
                     Submit Assignment
@@ -196,7 +196,7 @@ const Assignments = () => {
                 </div>
               ) : (
                 selectedAssignment.file && (
-                  <div className="submitted-file">
+                  <div className="a-submitted-file">
                     <h3>Submitted File</h3>
                     <p>{selectedAssignment.file}</p>
                   </div>
@@ -204,7 +204,7 @@ const Assignments = () => {
               )}
 
               <button
-                className="close-modal-btn"
+                className="a-close-modal-btn"
                 onClick={() => setSelectedAssignment(null)}
               >
                 Close

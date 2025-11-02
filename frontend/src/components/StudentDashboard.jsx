@@ -146,15 +146,15 @@ const StudentDashboard = () => {
         {/* Left Sidebar */}
         <aside className="left-sidebar">
           <ul className="sidebar-nav">
-            <li><a href="#dashboard"><span className="sidebar-icon">🏠</span> Dashboard</a></li>
-            <li><a href="/student-courses"><span className="sidebar-icon">📚</span> My Classes</a></li>
-            <li><a href="/student-test"><span className="sidebar-icon">📚</span> Tests</a></li>
-            <li><a href='/live-recorded'><span className="sidebar-icon">📹</span> Live & Recorded</a></li>
-            <li><a href='/assignments'><span className="sidebar-icon">📝</span> Assignments</a></li>
-            <li><a href='/schedule'><span className="sidebar-icon">📅</span> Schedule</a></li>
-            <li><a href="#grades"><span className="sidebar-icon">📊</span> Grades</a></li>
-            <li><a href="#study-materials"><span className="sidebar-icon">📁</span> Study Materials</a></li>
-            <li><a href="#messages"><span className="sidebar-icon">💬</span> Messages</a></li>
+            <li><a href="#dashboard"><span className="sidebar-icon">•</span> Dashboard</a></li>
+            <li><a href="/student-courses"><span className="sidebar-icon">•</span> My Classes</a></li>
+            <li><a href="/student-test"><span className="sidebar-icon">•</span> Tests</a></li>
+            <li><a href='/live-recorded'><span className="sidebar-icon">•</span> Live & Recorded</a></li>
+            <li><a href='/assignments'><span className="sidebar-icon">•</span> Assignments</a></li>
+            <li><a href='/schedule'><span className="sidebar-icon">•</span> Schedule</a></li>
+            <li><a href="#grades"><span className="sidebar-icon">•</span> Grades</a></li>
+            <li><a href="#study-materials"><span className="sidebar-icon">•</span> Study Materials</a></li>
+            <li><a href="#messages"><span className="sidebar-icon">•</span> Messages</a></li>
           </ul>
         </aside>
 
@@ -254,10 +254,9 @@ const StudentDashboard = () => {
             <div className="quick-access">
               <h3>Quick Access</h3>
               <ul>
-                <li><a href="#" onClick={(e) => { e.preventDefault(); setShowCalendar(true); }}><span className="quick-icon">📅</span> Calendar</a></li>
-                <li><a href="#timetable"><span className="quick-icon">⏰</span> Timetable</a></li>
-                <li><a href="#support"><span className="quick-icon">🆘</span> Support</a></li>
-                <li><a href="#feedback"><span className="quick-icon">💬</span> Feedback</a></li>
+                <li><a href="#" onClick={(e) => { e.preventDefault(); setShowCalendar(true); }}><span className="quick-icon">•</span> Calendar</a></li>
+                <li><a href="#timetable"><span className="quick-icon">•</span> Timetable</a></li>
+                <li><a href="#support"><span className="quick-icon">•</span> Support</a></li>
               </ul>
             </div>
           </aside>

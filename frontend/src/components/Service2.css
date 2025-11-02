@@ -1,68 +1,97 @@
 .service2-container {
+  background-color: #d3e6d9; /* same color as your top section */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100%;
   padding: 60px 20px;
   text-align: center;
-  background-color: #f5f7fa;
-  min-height: 100vh;
+  color: #000;
+  overflow-x: hidden;
 }
 
+/* Header */
 .service2-header {
   margin-bottom: 50px;
 }
 
 .service2-header h1 {
-  font-size: 2.8rem;
-  color: #1a1a1a;
+  font-size: 2.8rem; /* matches About page title */
+  font-weight: 700;
   margin-bottom: 15px;
 }
 
 .service2-header p {
-  color: #555;
+  color: #333;
   font-size: 1.2rem;
   max-width: 800px;
   margin: 0 auto;
   line-height: 1.6;
 }
 
-.service2-cards {
+/* List layout */
+.service2-list {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   gap: 25px;
 }
 
-.service2-card {
+/* Each service card */
+.service2-item {
   background: #ffffff;
   border-radius: 15px;
-  padding: 25px 20px;
-  width: 300px;
+  padding: 30px 35px;
+  width: 100%;
+  max-width: 800px;
+  text-align: left;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.service2-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+.service2-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
 }
 
-.service2-card h2 {
-  color: #1a1a1a;
-  margin-bottom: 12px;
-  font-size: 1.5rem;
+.service2-item h2 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
 }
 
-.service2-card p {
-  color: #666;
-  font-size: 1rem;
-  line-height: 1.5;
+.service2-item p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Fade-up animation (same as About page) */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
 }
 
 /* Responsive */
-@media (max-width: 992px) {
-  .service2-cards {
-    flex-direction: column;
-    align-items: center;
+@media (max-width: 768px) {
+  .service2-header h1 {
+    font-size: 2.2rem;
   }
-}
-* {
-  font-family: 'Lato', sans-serif;
+
+  .service2-item {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  .service2-header p {
+    font-size: 1rem;
+  }
 }

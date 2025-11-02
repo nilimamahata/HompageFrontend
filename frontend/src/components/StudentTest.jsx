@@ -79,24 +79,13 @@ const StudentTest = () => {
 
   return (
     <div className="student-test">
-      {/* Top Navbar */}
-      <nav className="st-student-top-navbar">
-        <div className="st-student-top-navbar-left">
-          <div className="st-student-profile-info">
-            <div className="st-student-profile-avatar">S</div>
-            <span>Student Name</span>
-          </div>
-        </div>
-        <div className="st-student-top-navbar-right">
-          <span className="st-student-nav-icon">🔔</span>
-          <span className="st-student-nav-icon">&#9881;</span>
-          <button onClick={handleLogout} className="st-student-logout-btn">Logout</button>
-        </div>
-      </nav>
+      <div className="st-test-page-header">
+       <h1>Take Tests</h1>
+        <p>Attempt and review your test results</p>
+      </div>
 
       {/* Main Content */}
       <div className="st-student-test-body">
-        <h1>Take Tests</h1>
 
         {!selectedTest ? (
           <div className="st-tests-list">
