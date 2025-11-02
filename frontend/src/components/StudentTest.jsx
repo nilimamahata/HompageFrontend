@@ -169,7 +169,7 @@ const StudentTest = () => {
               setSubmitted(false);
               setStudentAnswers({});
               setScore(0);
-            }} className="back-btn">Back to Tests</button>
+            }} className="st-back-btn">Back to Tests</button>
           </div>
         )}
       </div>

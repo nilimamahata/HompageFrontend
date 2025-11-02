@@ -85,24 +85,13 @@ const TeacherCourses = () => {
 
   return (
     <div className="teacher-courses">
-      {/* Top Navbar */}
-      <nav className="T-C-teacher-top-navbar">
-        <div className="T-C-teacher-top-navbar-left">
-          <div className="T-C-teacher-profile-info">
-            <div className="T-C-teacher-profile-avatar">T</div>
-            <span>Teacher Name</span>
-          </div>
-        </div>
-        <div className="T-C-teacher-top-navbar-right">
-          <span className="T-C-teacher-nav-icon">🔔</span>
-          <span className="T-C-teacher-nav-icon">&#9881;</span>
-          <button onClick={handleLogout} className="T-C-teacher-logout-btn">Logout</button>
-        </div>
-      </nav>
+      {/* Page Header */}
+      <div className="T-C-page-header">
+        <h1>Study Materials</h1>
+      </div>
 
       {/* Main Content */}
       <div className="T-C-teacher-courses-body">
-        <h1>Study Materials</h1>
         <div className="T-C-classes-list">
           {classes.map(cls => (
             <div key={cls.id} className="T-C-class-card">

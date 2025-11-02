@@ -145,24 +145,13 @@ const ClassTest = () => {
 
   return (
     <div className="class-test">
-      {/* Top Navbar */}
-      <nav className="C-T-teacher-top-navbar">
-        <div className="C-T-teacher-top-navbar-left">
-          <div className="C-T-teacher-profile-info">
-            <div className="C-T-teacher-profile-avatar">T</div>
-            <span>Teacher Name</span>
-          </div>
-        </div>
-        <div className="C-T-teacher-top-navbar-right">
-          <span className="C-T-teacher-nav-icon">🔔</span>
-          <span className="C-T-teacher-nav-icon">&#9881;</span>
-          <button onClick={handleLogout} className="teacher-logout-btn">Logout</button>
-        </div>
-      </nav>
+      {/* Page Header */}
+      <div className="C-T-page-header">
+        <h1>Class Test</h1>
+      </div>
 
       {/* Main Content */}
       <div className="C-T-class-test-body">
-        <h1>Class Tests</h1>
         <div className="C-T-classes-list">
           {classes.map(cls => (
             <div key={cls.id} className="C-T-class-card">
@@ -179,9 +168,9 @@ const ClassTest = () => {
                           onChange={(e) => setEditingTestData({ ...editingTestData, title: e.target.value })}
                           placeholder="Test Title"
                         />
-                        <div className="questions-editor">
+                        <div className="C-T-questions-editor">
                           {editingTestData.questions.map((q, qIndex) => (
-                            <div key={q.id} className="question-editor">
+                            <div key={q.id} className="C-T-question-editor">
                               <input
                                 type="text"
                                 value={q.question}

@@ -120,16 +120,16 @@ const TeacherAssignments = () => {
 
   return (
     <div className="teacher-assignments-page">
-      <div className="assignments-header">
+      <div className="ta-assignments-header">
         <h1>Assignments & Homework</h1>
-        <div className="header-buttons">
-          <button className="btn-create" onClick={() => setShowCreateModal(true)}>🟢 Create Assignment</button>
-          <button className="btn-view" onClick={() => setShowSubmissionsModal(true)}>🟣 View Submissions</button>
-          <button className="btn-analytics" onClick={() => setShowAnalyticsModal(true)}>🔵 Analytics</button>
+        <div className="ta-header-buttons">
+          <button className="ta-btn-create" onClick={() => setShowCreateModal(true)}>Create Assignment</button>
+          <button className="ta-btn-view" onClick={() => setShowSubmissionsModal(true)}>View Submissions</button>
+          <button className="ta-btn-analytics" onClick={() => setShowAnalyticsModal(true)}>Analytics</button>
         </div>
       </div>
 
-      <div className="filters-section">
+      <div className="ta-filters-section">
         <select value={filterSubject} onChange={(e) => setFilterSubject(e.target.value)}>
           <option value="All">All Subjects</option>
           <option value="Mathematics">Mathematics</option>
@@ -138,20 +138,23 @@ const TeacherAssignments = () => {
         </select>
         <select value={filterClass} onChange={(e) => setFilterClass(e.target.value)}>
           <option value="All">All Classes</option>
+          <option value="Class 10">Class 8</option>
+          <option value="Class 10">Class 9</option>
           <option value="Class 10">Class 10</option>
-          <option value="Class 11">Class 11</option>
+          <option value="Class 10">Class 11</option>
+          <option value="Class 11">Class 12</option>
         </select>
         <input type="date" value={filterDueDate} onChange={(e) => setFilterDueDate(e.target.value)} />
         <input type="text" placeholder="Search assignments..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
       </div>
 
-      <div className="assignments-content">
+      <div className="ta-assignments-content">
         {filteredAssignments.length === 0 ? (
-          <div className="empty-state">
+          <div className="ta-empty-state">
             <p>No assignments found. Create your first assignment!</p>
           </div>
         ) : (
-          <div className="assignments-table">
+          <div className="ta-assignments-table">
             <table>
               <thead>
                 <tr>
@@ -191,8 +194,8 @@ const TeacherAssignments = () => {
 
       {/* Create Assignment Modal */}
       {showCreateModal && (
-        <div className="modal-overlay">
-          <div className="modal-content">
+        <div className="ta-modal-overlay">
+          <div className="ta-modal-content">
             <h2>Create New Assignment</h2>
             <form onSubmit={(e) => { e.preventDefault(); handleCreateAssignment(); }}>
               <input type="text" placeholder="Title" value={newAssignment.title} onChange={(e) => setNewAssignment({...newAssignment, title: e.target.value})} required />
@@ -203,8 +206,11 @@ const TeacherAssignments = () => {
               </select>
               <select value={newAssignment.class} onChange={(e) => setNewAssignment({...newAssignment, class: e.target.value})} required>
                 <option value="">Select Class</option>
+                <option value="Class 10">Class 8</option>
+                <option value="Class 10">Class 9</option>
                 <option value="Class 10">Class 10</option>
-                <option value="Class 11">Class 11</option>
+                <option value="Class 10">Class 11</option>
+                <option value="Class 11">Class 12</option>
               </select>
               <input type="text" placeholder="Topic" value={newAssignment.topic} onChange={(e) => setNewAssignment({...newAssignment, topic: e.target.value})} />
               <textarea placeholder="Instructions" value={newAssignment.instructions} onChange={(e) => setNewAssignment({...newAssignment, instructions: e.target.value})} />
@@ -216,8 +222,12 @@ const TeacherAssignments = () => {
               <input type="file" onChange={(e) => setNewAssignment({...newAssignment, solutionFile: e.target.files[0]})} />
               <select value={newAssignment.assignTo} onChange={(e) => setNewAssignment({...newAssignment, assignTo: e.target.value})} required>
                 <option value="">Assign To</option>
+                <option value="">Select Class</option>
+                <option value="Class 10">Class 8</option>
+                <option value="Class 10">Class 9</option>
                 <option value="Class 10">Class 10</option>
-                <option value="Class 11">Class 11</option>
+                <option value="Class 10">Class 11</option>
+                <option value="Class 11">Class 12</option>
               </select>
               <button type="submit">Create Assignment</button>
               <button type="button" onClick={() => setShowCreateModal(false)}>Cancel</button>
@@ -228,8 +238,8 @@ const TeacherAssignments = () => {
 
       {/* View Submissions Modal */}
       {showSubmissionsModal && (
-        <div className="modal-overlay">
-          <div className="modal-content">
+        <div className="ta-modal-overlay">
+          <div className="ta-modal-content">
             <h2>View Submissions</h2>
             <table>
               <thead>
@@ -265,16 +275,16 @@ const TeacherAssignments = () => {
 
       {/* Analytics Modal */}
       {showAnalyticsModal && (
-        <div className="modal-overlay">
-          <div className="modal-content">
+        <div className="ta-modal-overlay">
+          <div className="ta-modal-content">
             <h2>Analytics</h2>
-            <div className="analytics-charts">
-              <div className="chart">Completion Rate: 75%</div>
-              <div className="chart">Average Score: 82%</div>
-              <div className="chart">Late Submissions: 10%</div>
-              <div className="chart">Most Active Class: Class 10</div>
+            <div className="ta-analytics-charts">
+              <div className="ta-chart">Completion Rate: 75%</div>
+              <div className="ta-chart">Average Score: 82%</div>
+              <div className="ta-chart">Late Submissions: 10%</div>
+              <div className="ta-chart">Most Active Class: Class 10</div>
             </div>
-            <div className="summary-stats">
+            <div className="ta-summary-stats">
               <p>Total Assignments: {assignments.length}</p>
               <p>Avg Score: 80%</p>
               <p>Submission Rate: 85%</p>
@@ -285,7 +295,7 @@ const TeacherAssignments = () => {
       )}
 
       {/* FAB for mobile */}
-      <button className="fab" onClick={() => setShowCreateModal(true)}>+</button>
+      <button className="ta-fab" onClick={() => setShowCreateModal(true)}>+</button>
     </div>
   );
 };

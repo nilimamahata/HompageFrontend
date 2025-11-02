@@ -6,10 +6,10 @@
   flex-direction: column;
   color: #222;
   overflow: hidden;
-}
+} 
 
 /* ===== Top Navbar ===== */
-.top-navbar {
+.sd-top-navbar {
   background: linear-gradient(90deg, #2a2a5e, #3d3d73);
   color: white;
   padding: 14px 28px;
@@ -22,19 +22,19 @@
   z-index: 1000;
 }
 
-.top-navbar-left {
+.sd-top-navbar-left {
   display: flex;
   align-items: center;
   gap: 35px;
 }
 
-.profile-info {
+.sd-profile-info {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.profile-avatar {
+.sd-profile-avatar {
   width: 42px;
   height: 42px;
   border-radius: 50%;
@@ -46,7 +46,7 @@
   font-weight: bold;
 }
 
-.class-dropdown select {
+.sd-class-dropdown select {
   padding: 6px 10px;
   border: none;
   border-radius: 6px;
@@ -54,13 +54,13 @@
   color: #222;
 }
 
-.top-navbar-right {
+.sd-top-navbar-right {
   display: flex;
   align-items: center;
   gap: 15px;
 }
 
-.nav-icon {
+.sd-nav-icon {
   font-size: 20px;
   cursor: pointer;
   padding: 8px;
@@ -68,11 +68,11 @@
   transition: background-color 0.3s;
 }
 
-.nav-icon:hover {
+.sd-nav-icon:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.logout-btn {
+.sd-logout-btn {
   background: #181835;
   color: white;
   border: none;
@@ -82,12 +82,12 @@
   transition: background 0.3s;
 }
 
-.logout-btn:hover {
+.sd-logout-btn:hover {
   background: #30305d;
 }
 
 /* ===== Layout ===== */
-.dashboard-body {
+.sd-dashboard-body {
   display: flex;
   flex: 1;
   overflow: hidden;
@@ -95,7 +95,7 @@
 }
 
 /* ===== Fixed Left Sidebar ===== */
-.left-sidebar {
+.sd-left-sidebar {
   position: fixed;
   top: 60px;
   left: 0;
@@ -108,17 +108,17 @@
   z-index: 900;
 }
 
-.sidebar-nav {
+.sd-sidebar-nav {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.sidebar-nav li {
+.sd-sidebar-nav li {
   margin-bottom: 10px;
 }
 
-.sidebar-nav a {
+.sd-sidebar-nav a {
   display: flex;
   align-items: center;
   gap: 15px;
@@ -130,16 +130,16 @@
   transition: background 0.3s;
 }
 
-.sidebar-nav a:hover {
+.sd-sidebar-nav a:hover {
   background-color: #e8f2ff;
 }
 
-.sidebar-icon {
+.sd-sidebar-icon {
   font-size: 18px;
 }
 
 /* ===== Fixed Right Sidebar ===== */
-.right-sidebar {
+.sd-right-sidebar {
   position: fixed;
   top: 60px;
   right: 0;
@@ -154,7 +154,7 @@
 }
 
 /* ===== Main Dashboard ===== */
-.main-dashboard {
+.sd-main-dashboard {
   flex: 1;
   margin-left: 250px;
   margin-right: 300px;
@@ -165,7 +165,7 @@
 }
 
 /* ===== Welcome Banner ===== */
-.welcome-banner {
+.sd-welcome-banner {
   background: #9a9dc9;
   color: #111;
   padding: 40px;
@@ -174,20 +174,20 @@
   text-align: center;
 }
 
-.welcome-banner h1 {
+.sd-welcome-banner h1 {
   font-size: 2.6rem;
   font-weight: 700;
   margin-bottom: 28px;
 }
 
-.welcome-banner p {
+.sd-welcome-banner p {
   font-size: 1.2rem;
   font-style: italic;
   opacity: 0.9;
 }
 
 /* ===== Profile Progress ===== */
-.profile-progress {
+.sd-profile-progress {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -195,12 +195,12 @@
   gap: 10px;
 }
 
-.profile-progress span {
+.sd-profile-progress span {
   font-weight: bold;
   font-size: 1.1rem;
 }
 
-.profile-progress .progress-bar {
+.sd-profile-progress .progress-bar {
   width: 60%;
   max-width: 300px;
   background: #ddd;
@@ -209,30 +209,30 @@
   overflow: hidden;
 }
 
-.profile-progress .progress-fill {
+.sd-profile-progress .progress-fill {
   height: 100%;
   background: #5a5ea5;
   transition: width 0.5s ease;
 }
 
 /* ===== Progress Summary ===== */
-.progress-summary {
+.sd-progress-summary {
   margin-top: 50px;
 }
 
-.progress-summary h3 {
+.sd-progress-summary h3 {
   margin-bottom: 25px;
   color: #111;
   font-size: 1.6rem;
 }
 
-.progress-cards {
+.sd-progress-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 30px;
 }
 
-.progress-card {
+.sd-progress-card {
   background: white;
   border-radius: 14px;
   padding: 30px 25px;
@@ -241,22 +241,22 @@
   transition: transform 0.25s ease;
 }
 
-.progress-card:hover {
+.sd-progress-card:hover {
   transform: translateY(-6px);
 }
 
-.progress-card h4 {
+.sd-progress-card h4 {
   margin-bottom: 12px;
   color: #333;
   font-size: 1.3rem;
 }
 
-.progress-card p {
+.sd-progress-card p {
   color: #555;
   margin-bottom: 12px;
 }
 
-.progress-card button {
+.sd-progress-card button {
   background: #5a6cb5;
   color: white;
   border: none;
@@ -266,19 +266,19 @@
   cursor: pointer;
 }
 
-.progress-card button:hover {
+.sd-progress-card button:hover {
   background: #7b87d0;
 }
 
 /* ===== Circular Progress ===== */
-.circular-progress {
+.sd-circular-progress {
   position: relative;
   width: 110px;
   height: 110px;
   margin: 0 auto 15px;
 }
 
-.progress-circle {
+.sd-progress-circle {
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -291,29 +291,29 @@
   justify-content: center;
 }
 
-.progress-circle span {
+.sd-progress-circle span {
   font-size: 1.4rem;
   font-weight: bold;
   color: #333;
 }
 
 /* ===== Recent Activities ===== */
-.recent-activities {
+.sd-recent-activities {
   margin-top: 50px;
 }
 
-.recent-activities h3 {
+.sd-recent-activities h3 {
   margin-bottom: 20px;
   color: #111;
 }
 
-.activity-timeline {
+.sd-activity-timeline {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
-.activity-item {
+.sd-activity-item {
   display: flex;
   align-items: center;
   gap: 15px;
@@ -323,7 +323,7 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
 }
 
-.activity-icon {
+.sd-activity-icon {
   width: 45px;
   height: 45px;
   background: #9a9dc9;
@@ -335,18 +335,18 @@
   font-size: 1.4rem;
 }
 
-.activity-content p {
+.sd-activity-content p {
   margin: 0;
   font-weight: 600;
 }
 
 /* ===== Quick Access ===== */
-.quick-access h3 {
+.sd-quick-access h3 {
   margin-bottom: 18px;
   color: #1f1f33;
 }
 
-.quick-access ul {
+.sd-quick-access ul {
   list-style: none;
   padding: 0;
   display: flex;
@@ -354,7 +354,7 @@
   gap: 10px;
 }
 
-.quick-access a {
+.sd-quick-access a {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -365,32 +365,32 @@
   transition: background-color 0.3s;
 }
 
-.quick-access a:hover {
+.sd-quick-access a:hover {
   background-color: #f2f4f8;
 }
 
 /* ===== Transparent Scrollbar ===== */
-.main-dashboard::-webkit-scrollbar,
-.left-sidebar::-webkit-scrollbar,
-.right-sidebar::-webkit-scrollbar {
+.sd-main-dashboard::-webkit-scrollbar,
+.sd-left-sidebar::-webkit-scrollbar,
+.sd-right-sidebar::-webkit-scrollbar {
   width: 2px;
 }
 
-.main-dashboard::-webkit-scrollbar-thumb,
-.left-sidebar::-webkit-scrollbar-thumb,
-.right-sidebar::-webkit-scrollbar-thumb {
+.sd-main-dashboard::-webkit-scrollbar-thumb,
+.sd-left-sidebar::-webkit-scrollbar-thumb,
+.sd-right-sidebar::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0); /* subtle transparent thumb */
   border-radius: 6px;
 }
 
-.main-dashboard::-webkit-scrollbar-thumb:hover,
-.left-sidebar::-webkit-scrollbar-thumb:hover,
-.right-sidebar::-webkit-scrollbar-thumb:hover {
+.sd-main-dashboard::-webkit-scrollbar-thumb:hover,
+.sd-left-sidebar::-webkit-scrollbar-thumb:hover,
+.sd-right-sidebar::-webkit-scrollbar-thumb:hover {
   background-color: rgba(0, 0, 0, 0.25); /* slightly more visible on hover */
 }
 
-.main-dashboard::-webkit-scrollbar-track,
-.left-sidebar::-webkit-scrollbar-track,
-.right-sidebar::-webkit-scrollbar-track {
+.sd-main-dashboard::-webkit-scrollbar-track,
+.sd-left-sidebar::-webkit-scrollbar-track,
+.sd-right-sidebar::-webkit-scrollbar-track {
   background: transparent; /* fully transparent track */
 }

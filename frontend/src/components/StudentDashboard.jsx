@@ -118,13 +118,13 @@ const StudentDashboard = () => {
   return (
     <div className="student-dashboard">
       {/* Top Navbar */}
-      <nav className="top-navbar">
-        <div className="top-navbar-left">
-          <div className="profile-info">
-            <div className="profile-avatar">S</div>
+      <nav className="sd-top-navbar">
+        <div className="sd-top-navbar-left">
+          <div className="sd-profile-info">
+            <div className="sd-profile-avatar">S</div>
             <span>Student Name</span>
           </div>
-          <div className="class-dropdown">
+          <div className="sd-class-dropdown">
             <select value={selectedClass} onChange={handleClassChange}>
               <option value="Class 8">Class 8</option>
               <option value="Class 9">Class 9</option>
@@ -134,83 +134,83 @@ const StudentDashboard = () => {
             </select>
           </div>
         </div>
-        <div className="top-navbar-right">
-          <span className="nav-icon">🔔</span>
-          <span className="nav-icon">&#9881;</span>
-          <button onClick={handleLogout} className="logout-btn">Logout</button>
+        <div className="sd-top-navbar-right">
+          <span className="sd-nav-icon">🔔</span>
+          <span className="sd-nav-icon">&#9881;</span>
+          <button onClick={handleLogout} className="sd-logout-btn">Logout</button>
         </div>
       </nav>
 
       {/* Dashboard Body */}
-      <div className="dashboard-body">
+      <div className="sd-dashboard-body">
         {/* Left Sidebar */}
-        <aside className="left-sidebar">
-          <ul className="sidebar-nav">
-            <li><a href="#dashboard"><span className="sidebar-icon">•</span> Dashboard</a></li>
-            <li><a href="/student-courses"><span className="sidebar-icon">•</span> My Classes</a></li>
-            <li><a href="/student-test"><span className="sidebar-icon">•</span> Tests</a></li>
-            <li><a href='/live-recorded'><span className="sidebar-icon">•</span> Live & Recorded</a></li>
-            <li><a href='/assignments'><span className="sidebar-icon">•</span> Assignments</a></li>
-            <li><a href='/schedule'><span className="sidebar-icon">•</span> Schedule</a></li>
-            <li><a href="#grades"><span className="sidebar-icon">•</span> Grades</a></li>
-            <li><a href="#study-materials"><span className="sidebar-icon">•</span> Study Materials</a></li>
-            <li><a href="#messages"><span className="sidebar-icon">•</span> Messages</a></li>
+        <aside className="sd-left-sidebar">
+          <ul className="sd-sidebar-nav">
+            <li><a href="#dashboard"><span className="sd-sidebar-icon">•</span> Dashboard</a></li>
+            <li><a href="/student-courses"><span className="sd-sidebar-icon">•</span> My Classes</a></li>
+            <li><a href="/student-test"><span className="sd-sidebar-icon">•</span> Tests</a></li>
+            <li><a href='/live-recorded'><span className="sd-sidebar-icon">•</span> Live & Recorded</a></li>
+            <li><a href='/assignments'><span className="sd-sidebar-icon">•</span> Assignments</a></li>
+            <li><a href='/schedule'><span className="sd-sidebar-icon">•</span> Schedule</a></li>
+            <li><a href="#grades"><span className="sd-sidebar-icon">•</span> Grades</a></li>
+            <li><a href="#study-materials"><span className="sd-sidebar-icon">•</span> Study Materials</a></li>
+            <li><a href="#messages"><span className="sd-sidebar-icon">•</span> Messages</a></li>
           </ul>
         </aside>
 
         {/* Main Dashboard */}
-        <main className="main-dashboard">
-          <div className="dashboard-content">
+        <main className="sd-main-dashboard">
+          <div className="sd-dashboard-content">
             {/* Welcome Banner */}
-            <div className="welcome-banner">
+            <div className="sd-welcome-banner">
               <h1>Welcome, Student!</h1>
               <p>"Success is not final, failure is not fatal: It is the courage to continue that counts." - Winston Churchill</p>
-              <div className="profile-progress">
+              <div className="sd-profile-progress">
                 <span>Profile 80% complete</span>
-                <div className="progress-bar">
-                  <div className="progress-fill" style={{ width: '80%' }}></div>
+                <div className="sd-progress-bar">
+                  <div className="sd-progress-fill" style={{ width: '80%' }}></div>
                 </div>
               </div>
             </div>
 
             {/* Progress Summary Cards */}
-            <div className="progress-summary">
+            <div className="sd-progress-summary">
               <h3>Subject Progress</h3>
-              <div className="progress-cards">
-                <div className="progress-card">
+              <div className="sd-progress-cards">
+                <div className="sd-progress-card">
                   <h4>Mathematics</h4>
-                  <div className="circular-progress">
-                    <div className="progress-circle" style={{ '--percentage': '85' }}>
+                  <div className="sd-circular-progress">
+                    <div className="sd-progress-circle" style={{ '--percentage': '85' }}>
                       <span>85%</span>
                     </div>
                   </div>
                   <p>Average: 88%</p>
                   <button>Continue Lesson</button>
                 </div>
-                <div className="progress-card">
+                <div className="sd-progress-card">
                   <h4>Science</h4>
-                  <div className="circular-progress">
-                    <div className="progress-circle" style={{ '--percentage': '72' }}>
+                  <div className="sd-circular-progress">
+                    <div className="sd-progress-circle" style={{ '--percentage': '72' }}>
                       <span>72%</span>
                     </div>
                   </div>
                   <p>Average: 75%</p>
                   <button>Continue Lesson</button>
                 </div>
-                <div className="progress-card">
+                <div className="sd-progress-card">
                   <h4>English</h4>
-                  <div className="circular-progress">
-                    <div className="progress-circle" style={{ '--percentage': '90' }}>
+                  <div className="sd-circular-progress">
+                    <div className="sd-progress-circle" style={{ '--percentage': '90' }}>
                       <span>90%</span>
                     </div>
                   </div>
                   <p>Average: 92%</p>
                   <button>Continue Lesson</button>
                 </div>
-                <div className="progress-card">
+                <div className="sd-progress-card">
                   <h4>Social Studies</h4>
-                  <div className="circular-progress">
-                    <div className="progress-circle" style={{ '--percentage': '78' }}>
+                  <div className="sd-circular-progress">
+                    <div className="sd-progress-circle" style={{ '--percentage': '78' }}>
                       <span>78%</span>
                     </div>
                   </div>
@@ -221,26 +221,26 @@ const StudentDashboard = () => {
             </div>
 
             {/* Recent Activity */}
-            <div className="panel recent-activities">
+            <div className="sd-recent-activities">
               <h3>Recent Activity</h3>
-              <div className="activity-timeline">
-                <div className="activity-item">
-                  <div className="activity-icon">✓</div>
-                  <div className="activity-content">
+              <div className="sd-activity-timeline">
+                <div className="sd-activity-item">
+                  <div className="sd-activity-icon">✓</div>
+                  <div className="sd-activity-content">
                     <p>Completed "Trigonometry Test"</p>
                     <span>2 hours ago</span>
                   </div>
                 </div>
-                <div className="activity-item">
-                  <div className="activity-icon">📤</div>
-                  <div className="activity-content">
+                <div className="sd-activity-item">
+                  <div className="sd-activity-icon">📤</div>
+                  <div className="sd-activity-content">
                     <p>Uploaded "History Assignment"</p>
                     <span>1 day ago</span>
                   </div>
                 </div>
-                <div className="activity-item">
-                  <div className="activity-icon">▶️</div>
-                  <div className="activity-content">
+                <div className="sd-activity-item">
+                  <div className="sd-activity-icon">▶️</div>
+                  <div className="sd-activity-content">
                     <p>Watched "Photosynthesis Lecture"</p>
                     <span>2 days ago</span>
                   </div>
@@ -250,13 +250,13 @@ const StudentDashboard = () => {
           </div>
 
           {/* Right Sidebar */}
-          <aside className="right-sidebar">
-            <div className="quick-access">
+          <aside className="sd-right-sidebar">
+            <div className="sd-quick-access">
               <h3>Quick Access</h3>
               <ul>
-                <li><a href="#" onClick={(e) => { e.preventDefault(); setShowCalendar(true); }}><span className="quick-icon">•</span> Calendar</a></li>
-                <li><a href="#timetable"><span className="quick-icon">•</span> Timetable</a></li>
-                <li><a href="#support"><span className="quick-icon">•</span> Support</a></li>
+                <li><a href="#" onClick={(e) => { e.preventDefault(); setShowCalendar(true); }}><span className="sd-quick-icon">•</span> Calendar</a></li>
+                <li><a href="#timetable"><span className="sd-quick-icon">•</span> Timetable</a></li>
+                <li><a href="#support"><span className="sd-quick-icon">•</span> Support</a></li>
               </ul>
             </div>
           </aside>

@@ -91,7 +91,7 @@ const TeacherDashboard = () => {
   return (
     <div className="teacher-dashboard">
       {/* Top Navbar */}
-      <nav className="td-teacher-top-navbar">
+      <nav className="teacher-top-navbar">
         <div className="teacher-top-navbar-left">
           <div className="teacher-profile-info">
             <div className="teacher-profile-avatar">T</div>
@@ -120,14 +120,14 @@ const TeacherDashboard = () => {
         {/* Left Sidebar */}
         <aside className="teacher-left-sidebar">
           <ul className="teacher-sidebar-nav">
-            <li><a href="#dashboard"><span className="teacher-sidebar-icon">🏠</span> Dashboard</a></li>
-            <li><a href="/teacher-courses"><span className="teacher-sidebar-icon">📚</span> Study Materials</a></li>
-            <li><a href='/teacher-live-recorded'><span className="teacher-sidebar-icon">📹</span> Live & Recorded</a></li>
-            <li><a href='/teacher-assignments'><span className="teacher-sidebar-icon">📝</span> Assignments</a></li>
-            <li><a href="/class-test"><span className="teacher-sidebar-icon">✏️</span> Class-Test</a></li>
-            <li><a href='/schedule'><span className="teacher-sidebar-icon">📅</span> Schedule</a></li>
-            <li><a href="#students"><span className="teacher-sidebar-icon">👥</span> My Students</a></li>
-            <li><a href="#messages"><span className="teacher-sidebar-icon">💬</span> Messages</a></li>
+            <li><a href="#dashboard"><span className="teacher-sidebar-icon">•</span> Dashboard</a></li>
+            <li><a href='/teacher-live-recorded'><span className="teacher-sidebar-icon">•</span> Live & Recorded</a></li>
+            <li><a href='/teacher-assignments'><span className="teacher-sidebar-icon">•</span> Assignments</a></li>
+            <li><a href="/class-test"><span className="teacher-sidebar-icon">•</span> Class-Test</a></li>
+            <li><a href="/teacher-courses"><span className="teacher-sidebar-icon">•</span> Study Materials</a></li>
+            <li><a href='/schedule'><span className="teacher-sidebar-icon">•</span> Schedule</a></li>
+            <li><a href="#students"><span className="teacher-sidebar-icon">•</span> My Students</a></li>
+            <li><a href="#messages"><span className="teacher-sidebar-icon">•</span> Messages</a></li>
           </ul>
         </aside>
 
@@ -173,7 +173,7 @@ const TeacherDashboard = () => {
                 <div className="teacher-progress-card">
                   <h4>Class 9 - English</h4>
                   <div className="teacher-circular-progress">
-                    <div className="progress-circle" style={{ '--percentage': '90' }}>
+                    <div className="teacher-progress-circle" style={{ '--percentage': '90' }}>
                       <span>90%</span>
                     </div>
                   </div>
@@ -184,7 +184,7 @@ const TeacherDashboard = () => {
             </div>
 
             {/* Recent Activity */}
-            <div className="teacher-panel recent-activities">
+            <div className="teacher-recent-activities">
               <h3>Recent Activity</h3>
               <div className="teacher-activity-timeline">
                 <div className="teacher-activity-item">
@@ -246,8 +246,8 @@ const TeacherDashboard = () => {
             <div className="teacher-quick-access">
               <h3>Quick Access</h3>
               <ul>
-                <li><a href="#" onClick={(e) => { e.preventDefault(); setShowCalendar(true); }}><span className="teacher-quick-icon">📅</span> Calendar</a></li>
-                <li><a href="#timetable"><span className="teacher-quick-icon">⏰</span> Timetable</a></li>
+                <li><a href="#" onClick={(e) => { e.preventDefault(); setShowCalendar(true); }}><span className="teacher-quick-icon">•</span> Calendar</a></li>
+                <li><a href="#timetable"><span className="teacher-quick-icon">•</span> Timetable</a></li>
               </ul>
             </div>
           </aside>

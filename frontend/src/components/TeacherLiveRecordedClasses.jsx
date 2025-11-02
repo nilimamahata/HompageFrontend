@@ -146,13 +146,13 @@ const TeacherLiveRecordedClasses = () => {
         <h1>Live & Recorded Classes</h1>
         <div className="T-L-action-buttons">
           <button className="T-L-action-btn schedule-btn" onClick={() => setShowScheduleModal(true)}>
-            🟢 + Schedule Live Class
+            Schedule Live Class
           </button>
           <button className="T-L-action-btn upload-btn" onClick={() => setShowUploadModal(true)}>
-            🔵 + Upload Recorded Class
+            Upload Recorded Class
           </button>
           <button className="T-L-action-btn go-live-btn" onClick={handleGoLiveNow}>
-            🟣 Go Live Now
+            Go Live Now
           </button>
         </div>
       </div>
@@ -218,7 +218,7 @@ const TeacherLiveRecordedClasses = () => {
           <div className="T-L-recorded-grid">
             {filteredRecordedClasses.map(cls => (
               <div key={cls.id} className="T-L-recorded-card">
-                <img src={cls.thumbnail} alt={cls.title} className="T-L-card-thumbnail" onClick={() => handleVideoClick(cls)} />
+             {/*  <img src={cls.thumbnail} alt={cls.title} className="T-L-card-thumbnail" onClick={() => handleVideoClick(cls)} />   */}
                 <div className="T-L-card-content">
                   <h3>{cls.title}</h3>
                   <p><strong>Subject:</strong> {cls.subject}</p>

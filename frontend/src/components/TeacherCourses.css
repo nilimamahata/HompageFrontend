@@ -1,332 +1,370 @@
+/* ===== Teacher Study Materials Page (Modern Clean UI) ===== */
 .teacher-courses {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  font-family: "Inter", Arial, sans-serif;
   min-height: 100vh;
+  background: #FBFBFE;
+  display: flex;
+  flex-direction: column;
+  color: #49465A;
+  letter-spacing: 0.3px;
+  padding-bottom: 60px;
 }
 
-.T-C-teacher-top-navbar {
-  background-color: #fff;
-  padding: 10px 20px;
+/* ===== Page Header ===== */
+.T-C-page-header {
+  background: #6E6A83;
+  color: #FFFFFF;
+  padding: 24px 36px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.T-C-teacher-top-navbar-left {
-  display: flex;
-  align-items: center;
-}
-
-.T-C-teacher-profile-info {
-  display: flex;
-  align-items: center;
-  margin-right: 20px;
-}
-
-.T-C-teacher-profile-avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #007bff;
-  color: white;
-  display: flex;
-  align-items: center;
   justify-content: center;
-  font-weight: bold;
-  margin-right: 10px;
-}
-
-.T-C-teacher-top-navbar-right {
-  display: flex;
   align-items: center;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-.T-C-teacher-nav-icon {
-  font-size: 20px;
-  margin-right: 15px;
-  cursor: pointer;
+.T-C-page-header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin: 0;
 }
 
-.T-C-teacher-logout-btn {
-  background-color: #dc3545;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.T-C-teacher-logout-btn:hover {
-  background-color: #c82333;
-}
-
+/* ===== Body ===== */
 .T-C-teacher-courses-body {
-  padding: 20px;
+  padding: 40px 50px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.T-C-teacher-courses-body h1 {
-  color: #333;
-  margin-bottom: 20px;
-}
-
+/* ===== Classes List ===== */
 .T-C-classes-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  gap: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
+/* ===== Class Card ===== */
 .T-C-class-card {
-  background-color: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  border-radius: 14px;
+  padding: 30px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid #F0F0F5;
+  flex: 1 1 400px;
+  min-width: 400px;
+}
+
+.T-C-class-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 }
 
 .T-C-class-card h3 {
-  color: #007bff;
-  margin-bottom: 15px;
+  color: #6E6A83;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #BFD7ED;
+  padding-bottom: 0.5rem;
+  font-size: 1.3rem;
 }
 
+/* ===== Materials List ===== */
 .T-C-materials-list {
-  margin-bottom: 15px;
+  margin-bottom: 1rem;
 }
 
+/* ===== Material Item ===== */
 .T-C-material-item {
+  background: #F8FAFD;
+  border: 1px solid #E0D4FA;
+  border-radius: 10px;
+  padding: 18px;
+  margin-bottom: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  margin-bottom: 10px;
-  background-color: #f9f9f9;
 }
 
 .T-C-material-item span {
-  flex-grow: 1;
+  font-weight: bold;
+  color: #6E6A83;
 }
 
-.T-C-material-item input {
-  flex-grow: 1;
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.T-C-edit-section {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 100%;
-}
-
-.T-C-edit-section input[type="text"] {
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.T-C-edit-section input[type="file"] {
-  padding: 5px;
-}
-
-.T-C-edit-section button {
-  background-color: #28a745;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-right: 5px;
-}
-
-.T-C-edit-section button:hover {
-  background-color: #218838;
-}
-
-.T-C-edit-section button:last-child {
-  background-color: #6c757d;
-}
-
-.T-C-edit-section button:last-child:hover {
-  background-color: #545b62;
-}
-
+/* ===== Material Actions ===== */
 .T-C-material-actions {
   display: flex;
-  gap: 10px;
+  gap: 0.5rem;
 }
 
 .T-C-material-actions button {
-  background-color: #007bff;
-  color: white;
+  background: #E7EEF8;
+  color: #4b4657;
   border: none;
-  padding: 5px 10px;
-  border-radius: 4px;
+  padding: 8px 16px;
+  border-radius: 6px;
   cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
 .T-C-material-actions button:hover {
-  background-color: #0056b3;
+  background: #6E6A83;
+  color: #fff;
 }
 
 .T-C-material-actions button:nth-child(2) {
-  background-color: #dc3545;
+  background: #f65c5c;
+  color: #fff;
 }
 
 .T-C-material-actions button:nth-child(2):hover {
-  background-color: #c82333;
+  background: #e24a4a;
 }
 
+/* ===== Class Card Button ===== */
+.T-C-class-card button {
+  background: #6E6A83;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.T-C-class-card button:hover {
+  background: #5d5975;
+}
+
+/* ===== Upload Section ===== */
 .T-C-upload-section {
-  margin-top: 15px;
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  background-color: #f9f9f9;
+  background: #F8FAFD;
+  border: 1px solid #E0D4FA;
+  border-radius: 10px;
+  padding: 25px;
+  margin-top: 1rem;
 }
 
 .T-C-upload-section input[type="text"] {
   width: 100%;
-  padding: 8px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 12px;
+  margin-bottom: 1rem;
+  border: 1px solid #E0D4FA;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.T-C-upload-section input[type="text"]:focus {
+  border-color: #BFD7ED;
+  outline: none;
 }
 
 .T-C-upload-section input[type="file"] {
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 }
 
 .T-C-upload-section button {
-  background-color: #28a745;
+  background: #6E6A83;
   color: white;
   border: none;
-  padding: 8px 16px;
-  border-radius: 4px;
+  padding: 10px 18px;
+  border-radius: 6px;
   cursor: pointer;
-  margin-right: 10px;
+  font-weight: 600;
+  transition: background 0.3s;
+  margin-right: 0.5rem;
 }
 
 .T-C-upload-section button:hover {
-  background-color: #218838;
+  background: #5d5975;
 }
 
 .T-C-upload-section button:last-child {
-  background-color: #6c757d;
+  background: #f65c5c;
+  color: #fff;
 }
 
 .T-C-upload-section button:last-child:hover {
-  background-color: #545b62;
+  background: #e24a4a;
 }
 
-.T-C-class-card button {
-  background-color: #28a745;
+/* ===== Edit Section ===== */
+.T-C-edit-section {
+  background: white;
+  border: 1px solid #E0D4FA;
+  border-radius: 10px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.T-C-edit-section input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #E0D4FA;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.T-C-edit-section input[type="text"]:focus {
+  border-color: #BFD7ED;
+  outline: none;
+}
+
+.T-C-edit-section input[type="file"] {
+  padding: 10px 0;
+}
+
+.T-C-edit-section button {
+  background: #6E6A83;
   color: white;
   border: none;
-  padding: 8px 16px;
-  border-radius: 4px;
+  padding: 10px 18px;
+  border-radius: 6px;
   cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+  margin-right: 0.5rem;
 }
 
-.T-C-class-card button:hover {
-  background-color: #218838;
+.T-C-edit-section button:hover {
+  background: #5d5975;
 }
 
-.T-C-tests-list {
-  margin-top: 15px;
+.T-C-edit-section button:last-child {
+  background: #f65c5c;
+  color: #fff;
 }
 
-.T-C-tests-list h4 {
-  color: #007bff;
-  margin-bottom: 10px;
+.T-C-edit-section button:last-child:hover {
+  background: #e24a4a;
 }
 
-.T-C-test-item {
+/* ===== Modal ===== */
+.T-C-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 10, 30, 0.5);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  margin-bottom: 10px;
-  background-color: #f9f9f9;
+  z-index: 999;
+  backdrop-filter: blur(4px);
 }
 
-.T-C-test-item span {
-  flex-grow: 1;
+.T-C-modal-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 480px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  animation: fadeIn 0.35s ease;
 }
 
-.T-C-test-actions {
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.T-C-modal-content h2 {
+  margin-top: 0;
+  color: #6E6A83;
+  font-weight: 600;
+  border-left: 4px solid #BFD7ED;
+  padding-left: 10px;
+}
+
+.T-C-modal-content form {
   display: flex;
-  gap: 10px;
+  flex-direction: column;
+  gap: 15px;
 }
 
-.T-C-test-actions button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 4px;
-  cursor: pointer;
+.T-C-modal-content input, .T-C-modal-content select, .T-C-modal-content textarea {
+  padding: 10px;
+  border: 1px solid #E0D4FA;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: all 0.3s;
 }
 
-.T-C-test-actions button:hover {
-  background-color: #0056b3;
+.T-C-modal-content input:focus, .T-C-modal-content select:focus, .T-C-modal-content textarea:focus {
+  border-color: #BFD7ED;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(191, 215, 237, 0.4);
 }
 
-.T-C-test-actions button:nth-child(2) {
-  background-color: #dc3545;
-}
-
-.T-C-test-actions button:nth-child(2):hover {
-  background-color: #c82333;
-}
-
-.T-C-test-section {
-  margin-top: 15px;
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  background-color: #f9f9f9;
-}
-
-.T-C-test-section input[type="text"] {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.T-C-test-section textarea {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+.T-C-modal-content textarea {
+  resize: vertical;
   min-height: 100px;
 }
 
-.T-C-test-section button {
-  background-color: #28a745;
-  color: white;
+.T-C-modal-content button {
+  padding: 10px 20px;
   border: none;
-  padding: 8px 16px;
-  border-radius: 4px;
+  border-radius: 8px;
+  font-weight: 600;
   cursor: pointer;
-  margin-right: 10px;
+  transition: all 0.3s ease;
 }
 
-.T-C-test-section button:hover {
-  background-color: #218838;
+.T-C-modal-content button[type="submit"] {
+  background: #6E6A83;
+  color: #fff;
 }
 
-.T-C-test-section button:last-child {
-  background-color: #6c757d;
+.T-C-modal-content button[type="submit"]:hover {
+  background: #5d5975;
 }
 
-.T-C-test-section button:last-child:hover {
-  background-color: #545b62;
+.T-C-modal-content button[type="button"] {
+  background: #f65c5c;
+  color: #fff;
+}
+
+.T-C-modal-content button[type="button"]:hover {
+  background: #e24a4a;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .T-C-page-header {
+    padding: 24px 20px;
+  }
+
+  .T-C-page-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .T-C-teacher-courses-body {
+    padding: 20px;
+  }
+
+  .T-C-classes-list {
+    grid-template-columns: 1fr;
+  }
+
+  .T-C-material-actions {
+    flex-direction: column;
+  }
+
+  .T-C-upload-section button,
+  .T-C-edit-section button {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .T-C-modal-content {
+    padding: 20px;
+  }
 }
