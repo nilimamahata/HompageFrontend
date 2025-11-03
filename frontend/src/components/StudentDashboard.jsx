@@ -152,9 +152,9 @@ const StudentDashboard = () => {
             <li><a href='/live-recorded'><span className="sd-sidebar-icon">•</span> Live & Recorded</a></li>
             <li><a href='/assignments'><span className="sd-sidebar-icon">•</span> Assignments</a></li>
             <li><a href='/schedule'><span className="sd-sidebar-icon">•</span> Schedule</a></li>
-            <li><a href="#grades"><span className="sd-sidebar-icon">•</span> Grades</a></li>
-            <li><a href="#study-materials"><span className="sd-sidebar-icon">•</span> Study Materials</a></li>
-            <li><a href="#messages"><span className="sd-sidebar-icon">•</span> Messages</a></li>
+            <li><a href="/student-study-materials"><span className="sd-sidebar-icon">•</span> Study Materials</a></li>
+            <li><a href="/student-messages"><span className="sd-sidebar-icon">•</span> Messages</a></li>
+            <li><a href="#certificate"><span className="sd-sidebar-icon">•</span> Certificate</a></li>
           </ul>
         </aside>
 
@@ -255,7 +255,7 @@ const StudentDashboard = () => {
               <h3>Quick Access</h3>
               <ul>
                 <li><a href="#" onClick={(e) => { e.preventDefault(); setShowCalendar(true); }}><span className="sd-quick-icon">•</span> Calendar</a></li>
-                <li><a href="#timetable"><span className="sd-quick-icon">•</span> Timetable</a></li>
+                <li><a href="#my-assistant"><span className="sd-quick-icon">•</span>  My Assistant</a></li>
                 <li><a href="#support"><span className="sd-quick-icon">•</span> Support</a></li>
               </ul>
             </div>

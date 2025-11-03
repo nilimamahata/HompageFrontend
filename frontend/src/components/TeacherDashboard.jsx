@@ -125,9 +125,8 @@ const TeacherDashboard = () => {
             <li><a href='/teacher-assignments'><span className="teacher-sidebar-icon">•</span> Assignments</a></li>
             <li><a href="/class-test"><span className="teacher-sidebar-icon">•</span> Class-Test</a></li>
             <li><a href="/teacher-courses"><span className="teacher-sidebar-icon">•</span> Study Materials</a></li>
-            <li><a href='/schedule'><span className="teacher-sidebar-icon">•</span> Schedule</a></li>
-            <li><a href="#students"><span className="teacher-sidebar-icon">•</span> My Students</a></li>
-            <li><a href="#messages"><span className="teacher-sidebar-icon">•</span> Messages</a></li>
+            <li><a href='/teacher-schedule'><span className="teacher-sidebar-icon">•</span> Schedule</a></li>
+            <li><a href="/teachers-messages"><span className="teacher-sidebar-icon">•</span> Messages</a></li>
           </ul>
         </aside>
 
@@ -212,7 +211,7 @@ const TeacherDashboard = () => {
             </div>
 
             {/* Messaging Section */}
-            <div className="teacher-panel messaging">
+            {/*<div className="teacher-panel messaging">
               <h3>Send Message to Student</h3>
               <div className="teacher-messaging-content">
                 <select value={selectedStudent} onChange={(e) => setSelectedStudent(e.target.value)}>
@@ -238,8 +237,8 @@ const TeacherDashboard = () => {
                   </div>
                 ))}
               </div>
-            </div>
-          </div>
+            </div>*/}
+          </div>  
 
           {/* Right Sidebar */}
           <aside className="teacher-right-sidebar">
@@ -247,7 +246,7 @@ const TeacherDashboard = () => {
               <h3>Quick Access</h3>
               <ul>
                 <li><a href="#" onClick={(e) => { e.preventDefault(); setShowCalendar(true); }}><span className="teacher-quick-icon">•</span> Calendar</a></li>
-                <li><a href="#timetable"><span className="teacher-quick-icon">•</span> Timetable</a></li>
+                <li><a href="#my-assistant"><span className="teacher-quick-icon">•</span> My Assistant</a></li>
               </ul>
             </div>
           </aside>

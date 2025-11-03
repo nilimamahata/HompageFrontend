@@ -36,6 +36,10 @@ import TeacherCourses from './components/TeacherCourses';
 import ClassTest from './components/ClassTest';
 import StudentTest from './components/StudentTest';
 import TeacherAssignments from './components/TeacherAssignments';
+import TeacherSchedule from './components/TeacherSchedule';
+import { StudentStudyMaterials } from './components/StudentStudyMaterials';
+import StudentMessages from './components/StudentMessages';
+import TeacherMessages from './components/TeacherMessages';
 
 function App() {
   const navigate = useNavigate();
@@ -51,7 +55,8 @@ function App() {
 
   return (
     <div className="App">
-      {location.pathname !== '/login' && location.pathname !== '/signup' && location.pathname !== '/student-dashboard' && location.pathname !== '/teacher-dashboard' && location.pathname !== '/student-courses' && location.pathname !== '/live-recorded' && location.pathname !== '/teacher-live-recorded' && location.pathname !== '/student-test' && location.pathname !== '/schedule' &&  location.pathname !== '/teacher-courses' && location.pathname !== '/class-test' && location.pathname !== '/teacher-assignments' && location.pathname !== '/assignments' && <Navbar onLoginClick={handleLoginClick} onSignupClick={handleSignupClick} />}
+      {location.pathname !== '/login' && location.pathname !== '/signup' && location.pathname !== '/student-dashboard' && location.pathname !== '/teacher-dashboard' && location.pathname !== '/student-courses' && location.pathname !== '/live-recorded' && location.pathname !== '/teacher-live-recorded' && location.pathname !== '/student-test' && location.pathname !== '/schedule' && location.pathname !== '/teacher-schedule'
+      && location.pathname !== '/teacher-courses' && location.pathname !== '/class-test' && location.pathname !== '/teacher-assignments' && location.pathname !== '/assignments' && location.pathname !== '/student-study-materials' && location.pathname !== '/student-messages' && location.pathname !== '/teachers-messages' && <Navbar onLoginClick={handleLoginClick} onSignupClick={handleSignupClick} />}
       <Routes>
         {/* Scrollable landing page */}
         <Route
@@ -131,8 +136,20 @@ function App() {
         {/* Schedule */}
         <Route path="/schedule" element={<Schedule />} />
 
+        {/* Teacher Schedule */}
+        <Route path="/teacher-schedule" element={<TeacherSchedule />} />
+
         {/* Calendar */}
         <Route path="/calendar" element={<Calendar />} />
+
+        {/* Student Study Materials */}
+        <Route path="/student-study-materials" element={<StudentStudyMaterials />} />
+
+        {/* Student Messages */}
+        <Route path="/student-messages" element={<StudentMessages />} />
+
+        {/* Teachers Messages */}
+        <Route path="/teachers-messages" element={<TeacherMessages />} />
       </Routes>
     </div>
   );
