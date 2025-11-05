@@ -105,31 +105,31 @@ const TeacherMessages = () => {
 
   return (
     <div className={`teacher-messages ${darkMode ? 'dark' : ''}`}>
-      <div className="messages-container">
+      <div className="tm-messages-container">
         {/* Left Sidebar */}
-        <aside className="messages-sidebar">
-          <div className="sidebar-header">
+        <aside className="tm-messages-sidebar">
+          <div className="tm-sidebar-header">
             <input
               type="text"
               placeholder="Search students or groups"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="search-bar"
+              className="tm-search-bar"
             />
-            <button onClick={handleNewMessage} className="new-message-btn">+ New Chat</button>
+            <button onClick={handleNewMessage} className="tm-new-message-btn">+ New Chat</button>
           </div>
-          <div className="tabs">
+          <div className="tm-tabs">
             {['All Chats', 'Class Groups', 'Individual'].map(tab => (
               <button
                 key={tab}
-                className={activeTab === tab ? 'active' : ''}
+                className={activeTab === tab ? 'tm-active' : ''}
                 onClick={() => setActiveTab(tab)}
               >
                 {tab}
               </button>
             ))}
           </div>
-          <div className="filters">
+          <div className="tm-filters">
             <select value={filter} onChange={(e) => setFilter(e.target.value)}>
               <option>All</option>
               <option>Unread only</option>
@@ -151,22 +151,22 @@ const TeacherMessages = () => {
               <option>Science</option>
             </select>
           </div>
-          <div className="chat-list">
+          <div className="tm-chat-list">
             {filteredChats.map(chat => (
               <div
                 key={chat.id}
-                className={`chat-item ${selectedChat === chat.id ? 'selected' : ''}`}
+                className={`tm-chat-item ${selectedChat === chat.id ? 'selected' : ''}`}
                 onClick={() => setSelectedChat(chat.id)}
               >
-                <div className="chat-avatar">{chat.name[0]}</div>
-                <div className="chat-info">
+                <div className="tm-chat-avatar">{chat.name[0]}</div>
+                <div className="tm-chat-info">
                   <h4>{chat.name}</h4>
                   <p>{chat.subject}</p>
-                  <p className="last-message">{chat.lastMessage}</p>
+                  <p className="tm-last-message">{chat.lastMessage}</p>
                 </div>
-                <div className="chat-meta">
-                  {chat.unread > 0 && <span className="unread-count">{chat.unread}</span>}
-                  <span className={`status ${chat.online ? 'online' : 'offline'}`}></span>
+                <div className="tm-chat-meta">
+                  {chat.unread > 0 && <span className="tm-unread-count">{chat.unread}</span>}
+                  <span className={`tm-status ${chat.online ? 'tm-online' : 'tm-offline'}`}></span>
                 </div>
               </div>
             ))}
@@ -174,45 +174,45 @@ const TeacherMessages = () => {
         </aside>
 
         {/* Main Chat Window */}
-        <main className="chat-window">
+        <main className="tm-chat-window">
           {selectedChat ? (
             <>
-              <div className="chat-header">
+              <div className="tm-chat-header">
                 <div>
                   <h3>{chats[activeTab].find(c => c.id === selectedChat)?.name}</h3>
                   <p>{chats[activeTab].find(c => c.id === selectedChat)?.subject}</p>
-                  {isTyping && <p className="typing-indicator">Student is typing...</p>}
+                  {isTyping && <p className="tm-typing-indicator">Student is typing...</p>}
                 </div>
-                <div className="menu">⋮</div>
+                <div className="tm-menu">⋮</div>
               </div>
               {pinnedMessages.length > 0 && (
-                <div className="pinned-messages">
+                <div className="tm-pinned-messages">
                   <h4>Pinned Messages</h4>
                   {pinnedMessages.map(id => (
-                    <div key={id} className="pinned-message">
+                    <div key={id} className="tm-pinned-message">
                       {messages.find(m => m.id === id)?.text}
                     </div>
                   ))}
                 </div>
               )}
-              <div className="chat-body">
+              <div className="tm-chat-body">
                 {messages.map(msg => (
-                  <div key={msg.id} className={`message ${msg.sender} ${msg.type === 'announcement' ? 'announcement' : ''}`}>
-                    <div className="message-bubble">
+                  <div key={msg.id} className={`tm-message ${msg.sender} ${msg.type === 'tm-announcement' ? 'tm-announcement' : ''}`}>
+                    <div className="tm-message-bubble">
                       {msg.text}
-                      {msg.attachment && <div className="attachment">📎 {msg.attachment}</div>}
-                      <div className="message-reactions">
+                      {msg.attachment && <div className="tm-attachment">📎 {msg.attachment}</div>}
+                      <div className="tm-message-reactions">
                         {msg.reactions.map((reaction, index) => (
-                          <span key={index} className="reaction">{reaction}</span>
+                          <span key={index} className="tm-reaction">{reaction}</span>
                         ))}
                       </div>
                     </div>
-                    <span className="message-time">{msg.time}</span>
-                    <button onClick={() => handlePinMessage(msg.id)} className="pin-btn">📌</button>
+                    <span className="tm-message-time">{msg.time}</span>
+                    <button onClick={() => handlePinMessage(msg.id)} className="tm-pin-btn">📌</button>
                   </div>
                 ))}
               </div>
-              <div className="chat-input">
+              <div className="tm-chat-input">
                 <input
                   type="text"
                   placeholder="Type a message..."
@@ -231,21 +231,21 @@ const TeacherMessages = () => {
               </div>
             </>
           ) : (
-            <div className="no-chat-selected">Select a chat to start messaging</div>
+            <div className="tm-no-chat-selected">Select a chat to start messaging</div>
           )}
         </main>
 
         {/* Right Info Panel */}
-        <aside className="info-panel">
+        <aside className="tm-info-panel">
           {selectedChat && (
             <>
-              <div className="student-details">
+              <div className="tm-student-details">
                 <h4>Student/Group Details</h4>
                 <p>Name: {chats[activeTab].find(c => c.id === selectedChat)?.name}</p>
                 <p>Subject: {chats[activeTab].find(c => c.id === selectedChat)?.subject}</p>
                 <p>Status: {chats[activeTab].find(c => c.id === selectedChat)?.online ? 'Active now' : 'Last seen at 8:30 PM'}</p>
               </div>
-              <div className="shared-files">
+              <div className="tm-shared-files">
                 <h4>Shared Files</h4>
                 <ul>
                   <li>Assignment.pdf</li>
@@ -253,11 +253,11 @@ const TeacherMessages = () => {
                   <li>Lab_Report.pdf</li>
                 </ul>
               </div>
-              <div className="notes-section">
+              <div className="tm-notes-section">
                 <h4>Notes/Remarks</h4>
                 <textarea placeholder="Add notes about this student/group..."></textarea>
               </div>
-              <div className="quick-access">
+              <div className="tm-quick-access">
                 <h4>Quick Access</h4>
                 <button>View Profile</button>
                 <button>Mute Chat</button>
@@ -270,7 +270,7 @@ const TeacherMessages = () => {
       </div>
 
       {/* Dark Mode Toggle */}
-      <button className="dark-mode-toggle" onClick={() => setDarkMode(!darkMode)}>
+      <button className="tm-dark-mode-toggle" onClick={() => setDarkMode(!darkMode)}>
         {darkMode ? '☀️' : '🌙'}
       </button>
     </div>

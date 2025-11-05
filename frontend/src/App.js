@@ -56,7 +56,7 @@ function App() {
   return (
     <div className="App">
       {location.pathname !== '/login' && location.pathname !== '/signup' && location.pathname !== '/student-dashboard' && location.pathname !== '/teacher-dashboard' && location.pathname !== '/student-courses' && location.pathname !== '/live-recorded' && location.pathname !== '/teacher-live-recorded' && location.pathname !== '/student-test' && location.pathname !== '/schedule' && location.pathname !== '/teacher-schedule'
-      && location.pathname !== '/teacher-courses' && location.pathname !== '/class-test' && location.pathname !== '/teacher-assignments' && location.pathname !== '/assignments' && location.pathname !== '/student-study-materials' && location.pathname !== '/student-messages' && location.pathname !== '/teachers-messages' && <Navbar onLoginClick={handleLoginClick} onSignupClick={handleSignupClick} />}
+      && location.pathname !== '/teacher-courses' && location.pathname !== '/class-test' && location.pathname !== '/teacher-assignments' && location.pathname !== '/assignments' && location.pathname !== '/student-study-materials' && location.pathname !== '/student-messages' && location.pathname !== '/teacher-messages' && <Navbar onLoginClick={handleLoginClick} onSignupClick={handleSignupClick} />}
       <Routes>
         {/* Scrollable landing page */}
         <Route
@@ -149,7 +149,7 @@ function App() {
         <Route path="/student-messages" element={<StudentMessages />} />
 
         {/* Teachers Messages */}
-        <Route path="/teachers-messages" element={<TeacherMessages />} />
+        <Route path="/teacher-messages" element={<TeacherMessages />} />
       </Routes>
     </div>
   );

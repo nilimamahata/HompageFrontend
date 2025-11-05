@@ -8,13 +8,13 @@
   overflow: hidden;
 }
 
-.messages-container {
+.tm-messages-container {
   display: flex;
   width: 100%;
   height: calc(100vh - 60px); /* Adjust for top navbar if present */
 }
 
-.messages-sidebar {
+.tm-messages-sidebar {
   width: 300px;
   background: #E7EEF8;
   border-right: 1px solid #ddd;
@@ -23,12 +23,12 @@
   box-shadow: 2px 0 6px rgba(0, 0, 0, 0.1);
 }
 
-.sidebar-header {
+.tm-sidebar-header {
   padding: 20px;
   border-bottom: 1px solid #ddd;
 }
 
-.search-bar {
+.tm-search-bar {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
@@ -38,7 +38,7 @@
   color: #222;
 }
 
-.new-message-btn {
+.tm-new-message-btn {
   width: 100%;
   padding: 10px;
   background: #5a6cb5;
@@ -49,16 +49,16 @@
   transition: background 0.3s;
 }
 
-.new-message-btn:hover {
+.tm-new-message-btn:hover {
   background: #7b87d0;
 }
 
-.tabs {
+.tm-tabs {
   display: flex;
   border-bottom: 1px solid #ddd;
 }
 
-.tabs button {
+.tm-tabs button {
   flex: 1;
   padding: 15px;
   background: none;
@@ -67,17 +67,17 @@
   border-bottom: 2px solid transparent;
 }
 
-.tabs button.active {
+.tm-tabs button.active {
   border-bottom-color: #5a6cb5;
   color: #5a6cb5;
 }
 
-.filters {
+.tm-filters {
   padding: 10px;
   border-bottom: 1px solid #ddd;
 }
 
-.filters select {
+.tm-filters select {
   width: 100%;
   padding: 5px;
   border: 1px solid #ccc;
@@ -87,12 +87,12 @@
   margin-bottom: 5px;
 }
 
-.chat-list {
+.tm-chat-list {
   flex: 1;
   overflow-y: auto;
 }
 
-.chat-item {
+.tm-chat-item {
   display: flex;
   padding: 15px;
   border-bottom: 1px solid #eee;
@@ -101,15 +101,15 @@
   transition: background 0.3s;
 }
 
-.chat-item:hover {
+.tm-chat-item:hover {
   background-color: #BFD7ED;
 }
 
-.chat-item.selected {
+.tm-chat-item.selected {
   background: #BFD7ED;
 }
 
-.chat-avatar {
+.tm-chat-avatar {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -121,33 +121,33 @@
   font-weight: bold;
 }
 
-.chat-info {
+.tm-chat-info {
   flex: 1;
 }
 
-.chat-info h4 {
+.tm-chat-info h4 {
   margin: 0;
   font-size: 14px;
 }
 
-.chat-info p {
+.tm-chat-info p {
   margin: 2px 0;
   font-size: 12px;
   color: #666;
 }
 
-.last-message {
+.tm-last-message {
   font-size: 12px !important;
   color: #999 !important;
 }
 
-.chat-meta {
+.tm-chat-meta {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.unread-count {
+.tm-unread-count {
   background: #ff5722;
   color: white;
   border-radius: 50%;
@@ -156,27 +156,27 @@
   margin-bottom: 5px;
 }
 
-.status {
+.tm-status {
   width: 8px;
   height: 8px;
   border-radius: 50%;
 }
 
-.status.online {
+.tm-status.online {
   background: #4caf50;
 }
 
-.status.offline {
+.tm-status.offline {
   background: #ccc;
 }
 
-.chat-window {
+.tm-chat-window {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
-.chat-header {
+.tm-chat-header {
   padding: 20px;
   border-bottom: 1px solid #ddd;
   display: flex;
@@ -184,37 +184,37 @@
   align-items: center;
 }
 
-.chat-header h3 {
+.tm-chat-header h3 {
   margin: 0;
 }
 
-.chat-header p {
+.tm-chat-header p {
   margin: 5px 0;
   color: #666;
 }
 
-.typing-indicator {
+.tm-typing-indicator {
   color: #5a6cb5;
   font-style: italic;
 }
 
-.menu {
+.tm-menu {
   cursor: pointer;
   font-size: 20px;
 }
 
-.pinned-messages {
+.tm-pinned-messages {
   padding: 10px;
   background: #fff3cd;
   border-bottom: 1px solid #ddd;
 }
 
-.pinned-message {
+.tm-pinned-message {
   font-size: 12px;
   margin-bottom: 5px;
 }
 
-.chat-body {
+.tm-chat-body {
   flex: 1;
   padding: 20px;
   overflow-y: auto;
@@ -222,63 +222,63 @@
   flex-direction: column;
 }
 
-.message {
+.tm-message {
   margin-bottom: 10px;
   display: flex;
   flex-direction: column;
 }
 
-.message.teacher {
+.tm-message.teacher {
   align-items: flex-end;
 }
 
-.message.student {
+.tm-message.student {
   align-items: flex-start;
 }
 
-.message-bubble {
+.tm-message-bubble {
   max-width: 60%;
   padding: 10px 15px;
   border-radius: 18px;
   position: relative;
 }
 
-.message.teacher .message-bubble {
+.tm-message.teacher .tm-message-bubble {
   background: #5a6cb5;
   color: white;
 }
 
-.message.student .message-bubble {
+.tm-message.student .tm-message-bubble {
   background: #f1f1f1;
   color: black;
 }
 
-.message.announcement .message-bubble {
+.tm-message.announcement .tm-message-bubble {
   background: #fff3cd;
   border: 1px solid #ffeaa7;
   color: #856404;
 }
 
-.attachment {
+.tm-attachment {
   margin-top: 5px;
   font-size: 12px;
   color: #666;
 }
 
-.message-reactions {
+.tm-message-reactions {
   margin-top: 5px;
   display: flex;
   gap: 5px;
 }
 
-.reaction {
+.tm-reaction {
   background: #e0e0e0;
   padding: 2px 5px;
   border-radius: 10px;
   font-size: 12px;
 }
 
-.pin-btn {
+.tm-pin-btn {
   background: none;
   border: none;
   cursor: pointer;
@@ -286,20 +286,20 @@
   margin-left: 5px;
 }
 
-.message-time {
+.tm-message-time {
   font-size: 10px;
   color: #999;
   margin-top: 2px;
 }
 
-.chat-input {
+.tm-chat-input {
   padding: 20px;
   border-top: 1px solid #ddd;
   display: flex;
   align-items: center;
 }
 
-.chat-input input {
+.tm-chat-input input {
   flex: 1;
   padding: 10px;
   border: 1px solid #ccc;
@@ -307,7 +307,7 @@
   margin-right: 10px;
 }
 
-.chat-input button {
+.tm-chat-input button {
   background: none;
   border: none;
   font-size: 18px;
@@ -315,7 +315,7 @@
   margin-right: 10px;
 }
 
-.chat-input button:last-child {
+.tm-chat-input button:last-child {
   background: #5a6cb5;
   color: white;
   border-radius: 50%;
@@ -327,11 +327,11 @@
   transition: background 0.3s;
 }
 
-.chat-input button:last-child:hover {
+.tm-chat-input button:last-child:hover {
   background: #7b87d0;
 }
 
-.no-chat-selected {
+.tm-no-chat-selected {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -339,33 +339,33 @@
   color: #999;
 }
 
-.info-panel {
+.tm-info-panel {
   width: 250px;
   background: #FBFBFE;
   border-left: 1px solid #ddd;
   padding: 20px;
 }
 
-.student-details, .shared-files, .notes-section, .quick-access {
+.tm-student-details, .tm-shared-files, .tm-notes-section, .tm-quick-access {
   margin-bottom: 20px;
 }
 
-.student-details h4, .shared-files h4, .notes-section h4, .quick-access h4 {
+.tm-student-details h4, .tm-shared-files h4, .tm-notes-section h4, .tm-quick-access h4 {
   margin-top: 0;
   margin-bottom: 10px;
 }
 
-.shared-files ul {
+.tm-shared-files ul {
   list-style: none;
   padding: 0;
 }
 
-.shared-files li {
+.tm-shared-files li {
   padding: 5px 0;
   border-bottom: 1px solid #eee;
 }
 
-.notes-section textarea {
+.tm-notes-section textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
@@ -373,7 +373,7 @@
   resize: vertical;
 }
 
-.quick-access button {
+.tm-quick-access button {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
@@ -385,11 +385,11 @@
   transition: background 0.3s;
 }
 
-.quick-access button:hover {
+.tm-quick-access button:hover {
   background: #7b87d0;
 }
 
-.dark-mode-toggle {
+.tm-dark-mode-toggle {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -404,7 +404,7 @@
   transition: background 0.3s;
 }
 
-.dark-mode-toggle:hover {
+.tm-dark-mode-toggle:hover {
   background: #7b87d0;
 }
 
@@ -414,25 +414,25 @@
   color: #fff;
 }
 
-.teacher-messages.dark .messages-sidebar,
-.teacher-messages.dark .chat-window,
-.teacher-messages.dark .info-panel {
+.tm-teacher-messages.dark .messages-sidebar,
+.tm-teacher-messages.dark .chat-window,
+.tm-teacher-messages.dark .info-panel {
   background: #444;
   color: #fff;
 }
 
-.teacher-messages.dark .chat-item,
-.teacher-messages.dark .sidebar-header,
-.teacher-messages.dark .chat-header,
-.teacher-messages.dark .chat-input {
+.tm-teacher-messages.dark .chat-item,
+.tm-teacher-messages.dark .sidebar-header,
+.tm-teacher-messages.dark .chat-header,
+.tm-teacher-messages.dark .chat-input {
   border-color: #555;
 }
 
-.teacher-messages.dark .message.student .message-bubble {
+.tm-teacher-messages.dark .message.student .message-bubble {
   background: #555;
   color: #fff;
 }
 
-.teacher-messages.dark .info-panel {
+.tm-teacher-messages.dark .info-panel {
   background: #444;
 }
